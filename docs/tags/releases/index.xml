@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Releases on Eldiron RPG Creator</title>
+        <link>https://eldiron.com/tags/releases/</link>
+        <description>Recent content in Releases on Eldiron RPG Creator</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 02 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eldiron.com/tags/releases/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Eldiron v0.7 Pre-Release</title>
+        <link>https://eldiron.com/p/release0.7-eldiron/</link>
+        <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://eldiron.com/p/release0.7-eldiron/</guid>
+        <description>&lt;img src="https://eldiron.com/p/release0.7-eldiron/cover.png" alt="Featured image of post Eldiron v0.7 Pre-Release" /&gt;&lt;p&gt;I have now released v0.70, an official pre-release with missing features. But it is supported and future versions will be backwards compatible.&lt;/p&gt;
+&lt;p&gt;You can download it for Windows and macOS here on &lt;a class=&#34;link&#34; href=&#34;https://github.com/markusmoenig/Eldiron/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Releases&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Linux binaries will be added soon!&lt;/p&gt;
+&lt;p&gt;Thanks so much for your support and as always you can contact me directly on Discord for support or questions.&lt;/p&gt;
+&lt;p&gt;Upwards and onwards!&lt;/p&gt;
+&lt;p&gt;Moody&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

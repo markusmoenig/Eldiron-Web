@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>About on Eldiron RPG Creator</title>
+        <link>https://eldiron.com/tags/about/</link>
+        <description>Recent content in About on Eldiron RPG Creator</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://eldiron.com/tags/about/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About Eldiron</title>
+        <link>https://eldiron.com/p/about-eldiron/</link>
+        <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://eldiron.com/p/about-eldiron/</guid>
+        <description>&lt;img src="https://eldiron.com/p/about-eldiron/featured.png" alt="Featured image of post About Eldiron" /&gt;&lt;p&gt;Eldiron is currently under active development and a v1 is planned for 2023. Eldiron is open source and licensed under the MIT.&lt;/p&gt;
+&lt;h2 id=&#34;features-of-v1&#34;&gt;Features of v1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Support games similar to Ultima 4 / 5 or any game which uses a rectangular grid layout.&lt;/li&gt;
+&lt;li&gt;Either render tiles directly or in 2.5D using the built in &lt;a class=&#34;link&#34; href=&#34;https://github.com/markusmoenig/Raycaster&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;raycaster&lt;/a&gt;. Games can switch between the two modes at runtime or display both at the same time (for example use the tiles view as a mini-map).&lt;/li&gt;
+&lt;li&gt;Eldiron comes with integrated tile-maps or your can use your own square tiles with up to four levels of transparency.&lt;/li&gt;
+&lt;li&gt;Single-player or multi-player experiences. Eldiron has a sophisticated multi-threaded server architecture to allow for as many player or NPC characters as possible.&lt;/li&gt;
+&lt;li&gt;Cross platform. Eldiron is written in Rust and can nearly run everywhere, i.e. on the Web, macOS, Windows, Linux, iOS, Android etc. Eldiron Creator can run on any desktop.&lt;/li&gt;
+&lt;li&gt;A sophisticated behavior node graph makes creation of AI behavior for NPCs easy. The node system is backed by a full-featured scripting language.&lt;/li&gt;
+&lt;li&gt;Eldiron Creator has editors for tile-maps, regions and node based graphs for character behavior, systems (like crafting), items and the overall game logic.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Retro top-down and isometric perspectives as well as low-poly meshes will be supported post v1.&lt;/p&gt;
+&lt;p&gt;You can download the current pre-release in &lt;a class=&#34;link&#34; href=&#34;https://github.com/markusmoenig/Eldiron/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Join the community on &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/ZrNj6baSZU&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord&lt;/a&gt; to get in contact.&lt;/p&gt;
+&lt;h2 id=&#34;goals&#34;&gt;Goals&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Being able to create games similar to the RPGs of the 80&amp;rsquo;s and 90&amp;rsquo;s.&lt;/li&gt;
+&lt;li&gt;Support single-player or multi-player games and even MMOs.&lt;/li&gt;
+&lt;li&gt;Over time support more perspectives like top-down and isometric.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;eldiron-book&#34;&gt;Eldiron Book&lt;/h2&gt;
+&lt;p&gt;I am currently working on the &lt;a class=&#34;link&#34; href=&#34;https://book.eldiron.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Eldiron Book&lt;/a&gt;. Please refer to the book for more detailed information on the creator, the server and clients and the overall project.&lt;/p&gt;
+&lt;h2 id=&#34;supporting-eldiron&#34;&gt;Supporting Eldiron&lt;/h2&gt;
+&lt;p&gt;You can support the Eldiron project by becoming a &lt;a class=&#34;link&#34; href=&#34;https://patreon.com/eldiron&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Patreon&lt;/a&gt; or a &lt;a class=&#34;link&#34; href=&#34;https://github.com/sponsors/markusmoenig&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Sponsor&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
