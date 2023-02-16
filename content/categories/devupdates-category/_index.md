@@ -1,6 +1,6 @@
 ---
-title: Example Category
-description: A description of this category
+title: Development Updates
+description: Development Updates of Eldiron
 image:
 
 # Badge style
