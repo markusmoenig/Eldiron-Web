@@ -8,7 +8,6 @@ categories:
     - About Category
 tags:
     - About
-weight: 10
 ---
 
 Eldiron is currently under active development and a v1 is planned for 2023. Eldiron is open source and licensed under the MIT.
