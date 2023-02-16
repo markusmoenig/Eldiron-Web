@@ -7,7 +7,7 @@ image: cover.png
 categories:
     - Releases Category
 tags:
-    - Releases
+    - release
 ---
 
 I have now released v0.70, an official pre-release with missing features. But it is supported and future versions will be backwards compatible.

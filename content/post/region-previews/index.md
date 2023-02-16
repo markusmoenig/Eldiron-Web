@@ -7,7 +7,7 @@ image: cover.png
 categories:
     - Development Updates
 tags:
-    - Development Updates
+    - dev-update
 ---
 
 The region editor now has a preview mode which shows all active elements like character / loot instances and lighting.
