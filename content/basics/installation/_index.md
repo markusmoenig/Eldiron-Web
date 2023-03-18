@@ -5,6 +5,8 @@ weight: 2
 
 You can download the current pre-release in [Releases](https://github.com/markusmoenig/Eldiron/releases).
 
+Once Eldiron v1.0 is released it will also become available on Steam.
+
 ## Building Eldiron Locally
 
 First, create the directory `embedded` in the `core_embed_binaries` directory:

@@ -3,6 +3,15 @@ title: "What's New"
 weight: 1
 ---
 
+#### v0.7.5 (2023-3-18)
+
+A new pre-release is available now [here](https://github.com/markusmoenig/Eldiron/releases/tag/v0.7.5).
+
+* Many new features, including an optional raycaster for dungeons.
+* A **.deb** binary for Linux.
+
+Any feedback is welcome.
+
 #### Development Update (2023-2-4)
 
 * The region editor now has a preview mode which shows all active elements like character / loot instances and lighting.

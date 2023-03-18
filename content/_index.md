@@ -1,11 +1,13 @@
 +++
 archetype = "home"
-title = "Eldiron"
+title = "Home"
 +++
 
 ![Logo](logo.png)
 
 Eldiron is currently under active development and a v1 is planned for 2023. Eldiron is open source and licensed under the MIT.
+
+Eldiron v0.7.5 is now available [here](https://github.com/markusmoenig/Eldiron/releases/tag/v0.7.5).
 
 ![Screenshot](region_screenshot.png)
 ![Screenshot](behavior_screenshot.png)
