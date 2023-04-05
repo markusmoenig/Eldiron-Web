@@ -5,9 +5,16 @@ weight: 2
 
 You can download the current pre-release in [Releases](https://github.com/markusmoenig/Eldiron/releases).
 
-Once Eldiron v1.0 is released it will also become available on Steam.
+On macOS you can get access to the current Beta via a public [TestFlight Link](https://testflight.apple.com/join/50oZ5yds).
 
-## Building Eldiron Locally
+For ArchLinux users, simply add Eldiron from AUR:
+```
+yay -S eldiron
+```
+
+Once Eldiron v1.0 is released it should also become available on Steam.
+
+### Building Eldiron Locally
 
 First, create the directory `embedded` in the `core_embed_binaries` directory:
 
@@ -16,7 +23,7 @@ $ mkdir core_embed_binaries/embedded
 ```
 
 Than, if you have [Rust installed](https://www.rust-lang.org/tools/install), you can build Eldiron simply via
-```cargo build --release```
+```cargo build --release --bin creator_main```
 
 Linux:
 

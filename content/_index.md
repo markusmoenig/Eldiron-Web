@@ -7,7 +7,7 @@ title = "Home"
 
 Eldiron is currently under active development and a v1 is planned for 2023. Eldiron is open source and licensed under the MIT.
 
-Eldiron v0.7.5 is now available [here](https://github.com/markusmoenig/Eldiron/releases/tag/v0.7.5).
+*The documentation for Eldiron is currently under development on this site*
 
 ![Screenshot](region_screenshot.png)
 ![Screenshot](behavior_screenshot.png)
@@ -24,6 +24,14 @@ Eldiron v0.7.5 is now available [here](https://github.com/markusmoenig/Eldiron/r
 
 Retro top-down and isometric perspectives as well as low-poly meshes will be supported post v1.
 
+## Goals
+
+* Being able to create games similar to the RPGs of the 80's and 90's.
+* Support single-player or multi-player games and even MMOs.
+* Over time support more perspectives like top-down and isometric.
+
+## Installation
+
 You can download the current pre-release in [Releases](https://github.com/markusmoenig/Eldiron/releases).
 
 On macOS you can get access to the current Beta via a public [TestFlight Link](https://testflight.apple.com/join/50oZ5yds).
@@ -34,13 +42,6 @@ yay -S eldiron
 ```
 
 Join the community on [Discord](https://discord.gg/ZrNj6baSZU) to get in contact.
-
-## Goals
-
-* Being able to create games similar to the RPGs of the 80's and 90's.
-* Support single-player or multi-player games and even MMOs.
-* Over time support more perspectives like top-down and isometric.
-
 
 ## Supporting Eldiron
 

@@ -1,8 +1,10 @@
 +++
 archetype = "chapter"
 title = "Eldiron Creator"
+alwaysopen = false
 weight = 2
 +++
 
-This chapter is all about getting you started with Eldiron Creator.
+Eldiron Creator is a powerful editor for Eldiron game projects.
+
 
