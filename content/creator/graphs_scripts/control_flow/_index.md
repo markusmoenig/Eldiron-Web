@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "Control Flow"
 weight = 2
 +++

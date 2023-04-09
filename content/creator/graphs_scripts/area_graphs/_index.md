@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "Area Graphs"
 weight = 5
 +++

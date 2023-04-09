@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "Nodes"
 weight = 1
 +++
@@ -8,8 +7,10 @@ weight = 1
 
 * [Behavior Tree](#behavior-tree)
 * [Expression](#expression)
+* [Has State ?](#has-state)
 * [Has Target ?](#has-target)
 * [Linear](#linear)
+* [Schedule](#schedule)
 * [Sequence](#sequence)
 
 ### Action Nodes
@@ -258,6 +259,16 @@ Executes the given script which is expected to return a boolean value.
 
 ---
 
+### Has State ?
+
+Checks the current state of the character.
+
+ #### Returns
+
+Success if the character currently is of the given state, failure otherwise.
+
+---
+
 ### Has Target ?
 
 Intended for NPCs.
@@ -445,11 +456,11 @@ This node randomly walks around the given position or area.
 
 Intended for NPCs.
 
-Respawns the NPC after a given amount of game ticks. Should be applied only to characters which were previously *purged* via [Set State](#set-state).
+Respawns the NPC after a given amount of in-game minutes. Should be applied only to characters which were previously *purged* via [Set State](#set-state).
 
 #### Parameters
 
-* **Ticks to Wait**. The amount of game ticks to wait before respawning.
+* **Minutes to Wait**. The amount of server minutes to wait before respawning.
 
 ##### See also
 
@@ -466,6 +477,23 @@ Screen nodes define a [screen script](../scripting/screen_scripts/). Screen scri
 #### Parameters
 
 * **Script**. The screen script.
+
+---
+
+### Schedule
+
+This node checks for a given time period.
+
+#### Parameters
+
+* **From**. The start server time.
+* **To**. The end server time.
+
+#### Returns
+
+If the current server time is between the given parameters it will continue with the connection on the right side (i.e. the schedule is in progress.)
+
+Otherwise it will continue with the bottom connection.
 
 ---
 
@@ -489,6 +517,13 @@ Executes the given script.
 
 ### Set State
 
+Sets the state of the character.
+
+* **Normal**. Character is in a normal state.
+* **Killed**. Character is killed (and can be resurrected).
+* **Purged**. Character is killed and purged from the system (only applies to NPCs).
+* **Sleeping**. Character is sleeping.
+* **Intoxicated**. Character is intoxicated.
 
 ---
 
@@ -620,7 +655,7 @@ The player character targets another character in the user specified direction. 
 
 ---
 
-# Untarget
+### Untarget
 
 Intended for NPCs.
 

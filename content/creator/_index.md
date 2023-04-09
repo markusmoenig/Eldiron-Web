@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "Eldiron Creator"
 alwaysopen = false
 weight = 2

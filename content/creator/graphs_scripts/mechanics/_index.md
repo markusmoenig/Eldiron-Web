@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "Mechanics"
 weight = 4
 +++

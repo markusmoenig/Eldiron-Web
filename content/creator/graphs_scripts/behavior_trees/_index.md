@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "Behavior Trees"
 weight = 1
 +++

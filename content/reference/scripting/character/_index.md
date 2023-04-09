@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "Character Scripts"
 weight = 1
 +++

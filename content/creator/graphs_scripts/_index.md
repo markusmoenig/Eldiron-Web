@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "Graphs & Scripting"
 weight = 1
 alwaysopen = false
