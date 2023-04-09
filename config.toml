@@ -50,7 +50,7 @@ weight = 4
   # Author of the site, will be used in meta information
   author = "Markus Moenig"
   # Description of the site, will be used in meta information
-  description = "ForgedThoughts is a 3D modeling and rendering programming language utilizing SDFs."
+  description = "Eldiron is a creator for classical RPGs."
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = false
   # Disable search function. It will hide search bar
