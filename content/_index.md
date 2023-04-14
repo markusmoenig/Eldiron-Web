@@ -38,7 +38,7 @@ On macOS you can get access to the current Beta via a public [TestFlight Link](h
 
 For ArchLinux users, simply add Eldiron from AUR:
 ```
-yay -S eldiron
+yay -S eldiron-bin
 ```
 
 Join the community on [Discord](https://discord.gg/ZrNj6baSZU) to get in contact.

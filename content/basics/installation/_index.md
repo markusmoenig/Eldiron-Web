@@ -9,7 +9,7 @@ On macOS you can get access to the current Beta via a public [TestFlight Link](h
 
 For ArchLinux users, simply add Eldiron from AUR:
 ```
-yay -S eldiron
+yay -S eldiron-bin
 ```
 
 Once Eldiron v1.0 is released it should also become available on Steam.
