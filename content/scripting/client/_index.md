@@ -4,15 +4,15 @@ weight = 2
 alwaysopen = true
 +++
 
-Scripting for the client side is done via screen scripts. See the [Screen]() node. Screen scripts basically draw the contents of the current screen of the game.
+Scripting for the client side is done via screen scripts. See the [Screen](../../nodes/_index.md#screen) node in the Game view. Screen scripts basically draw the contents of the current screen of the game and send commands to the server based on user actions.
 
 ### Basics
 
 ```rust
-// A position on the screen constructed by its x, y coordinates. 0, 0 is the top left corner.
+// pos, a position on the screen constructed by its x and y coordinates. 0, 0 is the top left corner.
 let p = pos(20, 30);
 
-// A rectangular area on the screen, constructed by its x, y, width and height values.
+// rect, a rectangular area on the screen, constructed by its x, y, width and height values.
 let title_rect = rect(20, 200, 200, 40);
 // Test if a position is inside the rect
 if title_rect.is_inside(p) {}
