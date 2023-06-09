@@ -16,27 +16,33 @@ url = "https://github.com/markusmoenig/Eldiron"
 weight = 1
 
 [[menu.shortcuts]]
+name = "<i class='fab fa-fw fa-youtube'></i> YouTube"
+identifier = "yt"
+url = "https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA"
+weight = 2
+
+[[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-patreon'></i> Patreon"
 identifier = "patreon"
 url = "https://patreon.com/eldiron"
-weight = 2
+weight = 3
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-discord'></i> Discord"
 identifier = "discord"
 url = "https://discord.gg/ZrNj6baSZU"
-weight = 3
+weight = 4
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
 url = "more/credits/"
-weight = 4
+weight = 5
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-twitter'></i> Twitter"
 identifier = "twitter"
 url = "https://twitter.com/EldironRPG"
-weight = 4
+weight = 6
 
 [params]
   # This controls whether submenus will be expanded (true), or collapsed (false) in the

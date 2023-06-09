@@ -93,3 +93,15 @@ other = "Sous-menu {{.}}"
 
 [Subsections]
 other = "Sous-sections de {{.}}"
+
+[tags]
+other = "Mots-clés"
+
+[tag]
+other = "Mot-clé"
+
+[categories]
+other = "Catégories"
+
+[category]
+other = "Catégorie"

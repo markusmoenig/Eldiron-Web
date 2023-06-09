@@ -9,6 +9,7 @@ if( isIE ){
 else{
     document.querySelector( 'body' ).classList.add( 'mobile-support' );
 }
+
 var isPrint = document.querySelector( 'body' ).classList.contains( 'print' );
 
 var isRtl = document.querySelector( 'html' ).getAttribute( 'dir' ) == 'rtl';
@@ -28,10 +29,6 @@ if( isRtl && !isIE ){
 var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
 
 var formelements = 'button, datalist, fieldset, input, label, legend, meter, optgroup, option, output, progress, select, textarea';
-
-// rapidoc: #280 disable broad document syntax highlightning
-window.Prism = window.Prism || {};
-Prism.manual = true;
 
 // PerfectScrollbar
 var psc;
@@ -66,6 +63,27 @@ function adjustContentWidth(){
         end = Math.max( 0, start - scrollbarSize );
     }
     elc.style[ dir_padding_end ] = '' + end + 'px';
+}
+
+function fixCodeTabs(){
+    /* if only a single code block is contained in the tab and no style was selected, treat it like style=code */
+    var codeTabContents = Array.from( document.querySelectorAll( '.tab-content.tab-panel-style' ) ).filter( function( tabContent ){
+        return tabContent.querySelector( '*:scope > .tab-content-text > div.highlight:only-child, *:scope > .tab-content-text > pre.pre-code:only-child');
+    });
+
+    codeTabContents.forEach( function( tabContent ){
+        var tabId = tabContent.dataset.tabItem;
+        var tabPanel = tabContent.parentNode.parentNode;
+        var tabButton = tabPanel.querySelector( '.tab-nav-button.tab-panel-style[data-tab-item="'+tabId+'"]' );
+        if( tabContent.classList.contains( 'initial' ) ){
+            tabButton.classList.remove( 'initial' );
+            tabButton.classList.add( 'code' );
+            tabContent.classList.remove( 'initial' );
+            tabContent.classList.add( 'code' );
+        }
+        // mark code blocks for FF without :has()
+        tabContent.classList.add( 'codify' );
+    });
 }
 
 function switchTab(tabGroup, tabId) {
@@ -261,7 +279,11 @@ function initMermaid( update, attrs ) {
     }
 }
 
-function initSwagger( update, attrs ){
+function initOpenapi( update, attrs ){
+    if( isIE ){
+        return;
+    }
+
     var state = this;
     if( update && !state.is_initialized ){
         return;
@@ -273,34 +295,157 @@ function initSwagger( update, attrs ){
     if( !state.is_initialized ){
         state.is_initialized = true;
         window.addEventListener( 'beforeprint', function(){
-            initSwagger( true, {
-                'bg-color': variants.getColorValue( 'PRINT-MAIN-BG-color' ),
-                'mono-font': variants.getColorValue( 'PRINT-CODE-font' ),
-                'primary-color': variants.getColorValue( 'PRINT-TAG-BG-color' ),
-                'regular-font': variants.getColorValue( 'PRINT-MAIN-font' ),
-                'text-color': variants.getColorValue( 'PRINT-MAIN-TEXT-color' ),
-                'theme': variants.getColorValue( 'PRINT-SWAGGER-theme' ),
-            });
+            initOpenapi( true, { isPrintPreview: true } );
         }.bind( this ) );
         window.addEventListener( 'afterprint', function(){
-            initSwagger( true );
+            initOpenapi( true, { isPrintPreview: false } );
         }.bind( this ) );
     }
 
     attrs = attrs || {
-        'bg-color': variants.getColorValue( 'MAIN-BG-color' ),
-        'mono-font': variants.getColorValue( 'CODE-font' ),
-        'primary-color': variants.getColorValue( 'TAG-BG-color' ),
-        'regular-font': variants.getColorValue( 'MAIN-font' ),
-        'text-color': variants.getColorValue( 'MAIN-TEXT-color' ),
-        'theme': variants.getColorValue( 'SWAGGER-theme' ),
+        isPrintPreview: false
     };
-    document.querySelectorAll( 'rapi-doc' ).forEach( function( e ){
-        Object.keys( attrs ).forEach( function( key ){
-            /* this doesn't work for FF 102, maybe related to custom elements? */
-            e.setAttribute( key, attrs[key] );
-        });
-    });
+
+    function addFunctionToResizeEvent(){
+
+    }
+    function getFirstAncestorByClass(){
+
+    }
+    function renderOpenAPI(oc) {
+        var buster = window.themeUseOpenapi.assetsBuster ? '?' + window.themeUseOpenapi.assetsBuster : '';
+        var print = isPrint || attrs.isPrintPreview ? "PRINT-" : "";
+		var theme = print ? `${baseUri}/css/theme-relearn-light.css` : document.querySelector( '#variant-style' ).attributes.href.value
+        var swagger_theme = variants.getColorValue( print + 'OPENAPI-theme' );
+        var swagger_code_theme = variants.getColorValue( print + 'OPENAPI-CODE-theme' );
+
+        const openapiId = 'relearn-swagger-ui';
+        const openapiIframeId = openapiId + "-iframe";
+        const openapiIframe = document.getElementById(openapiIframeId);
+        if (openapiIframe) {
+            openapiIframe.remove();
+        }
+        const openapiErrorId = openapiId + '-error';
+        const openapiError = document.getElementById(openapiErrorId);
+        if (openapiError) {
+            openapiError.remove();
+        }
+        const oi = document.createElement('iframe');
+        oi.id = openapiIframeId;
+        oi.classList.toggle('sc-openapi-iframe', true);
+        oi.srcdoc =
+            '<!doctype html>' +
+            '<html lang="en">' +
+                '<head>' +
+                    '<link rel="stylesheet" href="' + window.themeUseOpenapi.css + '">' +
+                    '<link rel="stylesheet" href="' + theme + '">' +
+                    '<link rel="stylesheet" href="' + baseUri + '/css/swagger.css' + buster + '">' +
+                    '<link rel="stylesheet" href="' + baseUri + '/css/swagger-' + swagger_theme + '.css' + buster + '">' +
+                '</head>' +
+                '<body>' +
+                    '<a class="relearn-expander" href="" onclick="return relearn_collapse_all()">Collapse all</a>' +
+                    '<a class="relearn-expander" href="" onclick="return relearn_expand_all()">Exapnd all</a>' +
+                    '<div id="relearn-swagger-ui"></div>' +
+                    '<script>' +
+                        'function relearn_expand_all(){' +
+                            'document.querySelectorAll( ".opblock-summary-control[aria-expanded=false]" ).forEach( btn => btn.click() );' +
+                            'document.querySelectorAll( ".model-container > .model-box > button[aria-expanded=false]" ).forEach( btn => btn.click() );' +
+                            'return false;' +
+                        '}' +
+                        'function relearn_collapse_all(){' +
+                            'document.querySelectorAll( ".opblock-summary-control[aria-expanded=true]" ).forEach( btn => btn.click() );' +
+                            'document.querySelectorAll( ".model-container > .model-box > .model-box > .model > span > button[aria-expanded=true]" ).forEach( btn => btn.click() );' +
+                            'return false;' +
+                        '}' +
+                    '</script>' +
+                '</body>' +
+            '</html>';
+        oi.height = '100%';
+        oi.width = '100%';
+        oi.onload = function(){
+            const openapiWrapper = getFirstAncestorByClass(oc, 'sc-openapi-wrapper');
+            const openapiPromise = new Promise( function(resolve){ resolve() });
+            openapiPromise
+                .then( function(){
+                    SwaggerUIBundle({
+                        defaultModelsExpandDepth: 2,
+                        defaultModelExpandDepth: 2,
+                        docExpansion: isPrint || attrs.isPrintPreview ? 'full' : 'list',
+                        domNode: oi.contentWindow.document.getElementById(openapiId),
+                        filter: !( isPrint || attrs.isPrintPreview ),
+                        layout: 'BaseLayout',
+                        onComplete: function(){
+                            if( isPrint || attrs.isPrintPreview ){
+                                oi.contentWindow.document.querySelectorAll( '.model-container > .model-box > button[aria-expanded=false]' ).forEach( function(btn){ btn.click() });
+                                setOpenAPIHeight(oi);
+                            }
+                        },
+                        plugins: [
+                            SwaggerUIBundle.plugins.DownloadUrl
+                        ],
+                        presets: [
+                            SwaggerUIBundle.presets.apis,
+                            SwaggerUIStandalonePreset,
+                        ],
+                        syntaxHighlight: {
+                            activated: true,
+                            theme: swagger_code_theme,
+                        },
+                        url: oc.getAttribute('openapi-url'),
+                        validatorUrl: 'none',
+                    });
+                })
+                .then( function(){
+                    let observerCallback = function () {
+                        setOpenAPIHeight(oi);
+                    };
+                    let observer = new MutationObserver(observerCallback);
+                    observer.observe(oi.contentWindow.document.documentElement, {
+                        childList: true,
+                        subtree: true,
+                    });
+                })
+                .then( function(){
+                    if (openapiWrapper) {
+                        openapiWrapper.classList.toggle('is-loading', false);
+                    }
+                    setOpenAPIHeight(oi);
+                })
+                .catch( function(error){
+                    const ed = document.createElement('div');
+                    ed.classList.add('sc-alert', 'sc-alert-error');
+                    ed.innerHTML = error;
+                    ed.id = openapiErrorId;
+                    while (oc.lastChild) {
+                        oc.removeChild(oc.lastChild);
+                    }
+                    if (openapiWrapper) {
+                        openapiWrapper.classList.toggle('is-loading', false);
+                        openapiWrapper.insertAdjacentElement('afterbegin', ed);
+                    }
+                });
+        };
+        oc.appendChild(oi);
+    }
+    function setOpenAPIHeight(oi) {
+        // add empirical offset if in print preview (GC 103)
+        oi.style.height =
+            (oi.contentWindow.document.documentElement.getBoundingClientRect().height + (attrs.isPrintPreview ? 200 : 0) )+
+            'px';
+    }
+    function resizeOpenAPI() {
+        let divi = document.getElementsByClassName('sc-openapi-iframe');
+        for (let i = 0; i < divi.length; i++) {
+            setOpenAPIHeight(divi[i]);
+        }
+    };
+    let divo = document.getElementsByClassName('sc-openapi-container');
+    for (let i = 0; i < divo.length; i++) {
+        renderOpenAPI(divo[i]);
+    }
+    if (divo.length) {
+        addFunctionToResizeEvent(resizeOpenAPI);
+    }
 }
 
 function initAnchorClipboard(){
@@ -388,7 +533,7 @@ function initCodeClipboard(){
             code.classList.add( 'copy-to-clipboard-code' );
             if( inPre ){
                 code.classList.add( 'copy-to-clipboard' );
-                code.classList.add( 'pre-code' );
+                code.parentNode.classList.add( 'pre-code' );
             }
             else{
                 var clone = code.cloneNode( true );
@@ -550,7 +695,7 @@ function initMenuScrollbar(){
     });
     // now that we may have collapsible menus, we need to call a resize
     // for the menu scrollbar if sections are expanded/collapsed
-    document.querySelectorAll('#sidebar .collapsible-menu input.toggle').forEach( function(e){
+    document.querySelectorAll('#sidebar .collapsible-menu input').forEach( function(e){
         e.addEventListener('change', function(){
             psm && setTimeout( function(){ psm.update(); }, 10 );
         });
@@ -828,7 +973,7 @@ function initScrollPositionSaver(){
 function scrollToPositions() {
     // show active menu entry
     window.setTimeout( function(){
-        var e = document.querySelector( '#sidebar ul.topics li.active a' );
+        var e = document.querySelector( '#sidebar li.active a' );
         if( e && e.scrollIntoView ){
             e.scrollIntoView({
                 block: 'center',
@@ -910,8 +1055,8 @@ function mark() {
 					expandInputs[0].checked = true;
 				}
 			}
-			if( parent.tagName.toLowerCase() === 'li' ){
-				var toggleInputs = parent.querySelectorAll( 'input.toggle:not(.menu-marked)' );
+			if( parent.tagName.toLowerCase() === 'li' && parent.parentNode && parent.parentNode.tagName.toLowerCase() === 'ul' && parent.parentNode.classList.contains( 'collapsible-menu' )){
+				var toggleInputs = parent.querySelectorAll( 'input:not(.menu-marked)' );
 				if( toggleInputs.length ){
 					toggleInputs[0].classList.add( 'menu-marked' );
 					toggleInputs[0].dataset.checked = toggleInputs[0].checked ? 'true' : 'false';
@@ -987,8 +1132,8 @@ function unmark() {
 	for( var i = 0; i < markedElements.length; i++ ){
 		var parent = markedElements[i].parentNode;
 		while( parent && parent.classList ){
-			if( parent.tagName.toLowerCase() === 'li' ){
-				var toggleInputs = parent.querySelectorAll( 'input.toggle.menu-marked' );
+			if( parent.tagName.toLowerCase() === 'li' && parent.parentNode && parent.parentNode.tagName.toLowerCase() === 'ul' && parent.parentNode.classList.contains( 'collapsible-menu' )){
+				var toggleInputs = parent.querySelectorAll( 'input.menu-marked' );
 				if( toggleInputs.length ){
 					toggleInputs[0].checked = toggleInputs[0].dataset.checked === 'true';
 					toggleInputs[0].dataset.checked = null;
@@ -1122,11 +1267,12 @@ function initSearch() {
 ready( function(){
     initArrowNav();
     initMermaid();
-    initSwagger();
+    initOpenapi();
     initMenuScrollbar();
     initToc();
     initAnchorClipboard();
     initCodeClipboard();
+    fixCodeTabs();
     restoreTabSelections();
     initSwipeHandler();
     initHistory();
@@ -1153,12 +1299,11 @@ if( window.themeUseMermaid ){
     useMermaid( window.themeUseMermaid );
 }
 
-function useSwagger( config ){
-    if( config.theme && variants ){
-        var write_style = variants.findLoadedStylesheet( 'variant-style' );
-        write_style.setProperty( '--CONFIG-SWAGGER-theme', config.theme );
+function useOpenapi( config ){
+    if( config.css && config.css.startsWith( '/' ) ){
+        config.css = baseUri + config.css;
     }
 }
-if( window.themeUseSwagger ){
-    useSwagger( window.themeUseSwagger );
+if( window.themeUseOpenapi ){
+    useOpenapi( window.themeUseOpenapi );
 }

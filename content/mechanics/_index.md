@@ -1,6 +1,6 @@
 +++
 title = "Mechanics"
-weight = 3
+weight = 2
 alwaysopen = false
 +++
 

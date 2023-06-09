@@ -82,6 +82,9 @@ sup {
 sub {
   bottom: -0.25em; }
 
+iframe {
+  border: 0; }
+
 img {
   border: 0;
   max-width: 100%; }
@@ -108,7 +111,8 @@ textarea {
   margin: 0; }
 
 button {
-  overflow: visible; }
+  overflow: visible;
+  padding: 0; }
 
 button,
 select {

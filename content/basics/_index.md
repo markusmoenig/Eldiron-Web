@@ -7,11 +7,21 @@ weight = 1
 
 Eldiron consists of [Eldiron Creator](../creator/), a desktop application available for macOS, Windows and Linux, and various clients (and a server) which will run the created games on nearly any device.
 
-Eldiron v1.0 is under active development and scheduled for 2023. V1 will be able to create games similar to Ultima 4 and 5 including 3D retro regions and multi-player servers.
+Eldiron v1.0 is under active development and scheduled for 2023. V1 will be able to create games similar to Ultima 4 and 5 (or any game using square tiles) including 3D retro regions and multi-player servers.
 
 Later goals are support for more perspectives (like isometric) and much more.
 
 Eldiron is open source (licensed under the MIT) and 100% free to use.
+
+### Documentation
+
+This documentation provides the core information about Eldiron, the basic mechanics, how to host games and the scripting and node reference.
+
+This is supplementary to the tutorials I will provide on my [YouTube channel](https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA) which will cover all these topics and more in detail.
+
+Screenshots and user interfaces change, and for me it is easier to create a new video explaining these changes than trying to keep the documentation up-to-date.
+
+If you have any questions, feel free to reach out via the [Eldiron Discord Server](https://discord.gg/ZrNj6baSZU).
 
 ### Supporting Eldiron
 

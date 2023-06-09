@@ -30,7 +30,7 @@ To use codefence syntax you have to turn off `guessSyntax` for the `markup.highl
 {{% /notice %}}
 
 {{< tabs groupId="shortcode-parameter">}}
-{{% tab name="codefence" %}}
+{{% tab title="codefence" %}}
 
 ````md
 ```mermaid { align="center" zoom="true" }
@@ -41,7 +41,7 @@ graph LR;
 ````
 
 {{% /tab %}}
-{{% tab name="shortcode" %}}
+{{% tab title="shortcode" %}}
 
 ````go
 {{</* mermaid align="center" zoom="true" */>}}
@@ -52,7 +52,7 @@ graph LR;
 ````
 
 {{% /tab %}}
-{{% tab name="partial" %}}
+{{% tab title="partial" %}}
 
 ````go
 {{ partial "shortcodes/mermaid.html" (dict
@@ -523,4 +523,72 @@ C4Context
     UpdateRelStyle(SystemC, customerA, $textColor="red", $lineColor="red", $offsetX="-50", $offsetY="20")
 
     UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
+{{< /mermaid >}}
+
+### Mindmaps
+
+````go
+{{</* mermaid */>}}
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+{{</* /mermaid */>}}
+````
+
+{{< mermaid >}}
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+{{< /mermaid >}}
+
+### Timeline
+
+````go
+{{</* mermaid */>}}
+timeline
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook
+         : Google
+    2005 : Youtube
+    2006 : Twitter
+{{</* /mermaid */>}}
+````
+
+{{< mermaid >}}
+timeline
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook
+         : Google
+    2005 : Youtube
+    2006 : Twitter
 {{< /mermaid >}}
