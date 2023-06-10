@@ -26,14 +26,14 @@ let color = rgba(200, 120, 32, 128);
 
 ### Drawing
 
-Eldiron installs a ```tilemaps``` interface in the script context. You can request a specific tile-map by calling the ```get``` function. The name of the tile-map is the same as in the asset view of Eldiron Creator.
+The name of the tilemaps or images is the same as in the asset view of Eldiron Creator.
 
 ```rust
-// Get a tile-map
+// Get the tilemaps and a reference to the "Icons" map.
 let tm = get_tilemaps().get("Icons");
 ```
 
-You can get a specific tile from the tile-map using its ```get_tile``` method. It takes the tiles grid location as arguments. You can see the grid locations in the screen editor.
+You can get a specific tile from the tile-map using its ```get_tile``` method. It takes the tiles grid location as arguments. You can see the grid locations in the asset or screen editor of Eldiron Creator.
 
 ```rust
 // Get a tile

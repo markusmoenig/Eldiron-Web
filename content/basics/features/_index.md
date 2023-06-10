@@ -20,4 +20,5 @@ Retro top-down and isometric perspectives as well as low-poly meshes will be sup
 
 * Being able to create games similar to the RPGs of the 80's and 90's.
 * Support single-player or multi-player games and even MMOs.
-* Over time support more perspectives like top-down and isometric.
+* Over time support more perspectives like top-down, isometric and support for low-poly meshes.
+* Complex character behaviors. My goal is to be able to simulate real life character behavior and whole cities. Your phones CPU power is more than 50 times faster than the computers the original Ultima 5 ran on. There is no reason to limit what you can do. The behavior node and scripting system has been designed from the ground up to be flexible and expandable.

@@ -15,7 +15,7 @@ Eldiron is open source (licensed under the MIT) and 100% free to use.
 
 ### Documentation
 
-This documentation provides the core information about Eldiron, the basic mechanics, how to host games and the scripting and node reference.
+This documentation provides the core information about Eldiron, the basic mechanics, how to ship or host games and the scripting and node reference.
 
 This is supplementary to the tutorials I will provide on my [YouTube channel](https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA) which will cover all these topics and more in detail.
 
@@ -25,6 +25,6 @@ If you have any questions, feel free to reach out via the [Eldiron Discord Serve
 
 ### Supporting Eldiron
 
-You can support Eldiron by becoming a [Patreon](https://patreon.com/eldiron) or a [GitHub Sponsor](https://github.com/sponsors/markusmoenig).
+You can support Eldiron by becoming a [Patreon](https://patreon.com/eldiron) or a [GitHub Sponsor](https://github.com/sponsors/markusmoenig). Any support is highly appreciated.
 
-Any support is highly appreciated.
+Code and art donations are of course also welcome. This is a big project, both on the coding and on the graphics / art side, so if you are interested to participate please reach out.

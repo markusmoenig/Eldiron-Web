@@ -31,7 +31,7 @@ let coin = currency(8, 2);
 
 ## Character Sheets
 
-Every character, if its a player character or an NPC, has its own character sheet.
+Every character, if its a player character or an NPC, has its own character sheet. The sheet holds all character info, not only the abilities and hit points but also inventory, equipment, skills, spells etc.
 
 ```rust
 // Get a copy of the sheet of the current character
@@ -53,7 +53,7 @@ sheet.hit_points = 18;
 // Get / set the wealth of the character
 sheet.wealth = currency(8, 2);
 
-// Get the name, class and race names of the character (Defined via the Character settings)
+// Get the name, class and race names of the character (Defined via the character settings)
 let name = sheet.name;
 let class = sheet.class;
 let race = sheet.race;
