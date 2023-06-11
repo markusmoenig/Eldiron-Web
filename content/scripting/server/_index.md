@@ -29,6 +29,13 @@ By default the currency in Eldiron is gold and silver, where 10 silver is one go
 let coin = currency(8, 2);
 ```
 
+The currency struct is a container only, but you can get a string representation. Use the below sheet functions to add or remove money.
+
+```rust
+// "8G 2S"
+let string = coin.to_string();
+```
+
 ## Character Sheets
 
 Every character, if its a player character or an NPC, has its own character sheet. The sheet holds all character info, not only the abilities and hit points but also inventory, equipment, skills, spells etc.
@@ -67,10 +74,166 @@ set_sheet(sheet);
 
 ## Inventory
 
+The inventory is part of the character sheet. Normally you only need to add / remove items manually during character creation. As trading / buying / dropping items is done automatically via the node system.
+
 ```rust
 let sheet = get_sheet();
 
-// Add an item to the inventory
-inventory_add(sheet, "Torch");
+// Add an item to the inventory, we get the changed sheet back
+sheet = inventory_add(sheet, "Torch");
 
+// Equip an item in the inventory (armor or weapon), we get the changed sheet back
+sheet = inventory_equip(sheet, "Sword");
+
+// Get the inventory from the sheet
+let inventory = sheet.inventory;
+
+// Iterate over the items of the inventory
+for item in inventory {
+
+    // The name of the item
+    print("item name: " + item.name);
+
+    // The item amount (for stackable items)
+    print("item amount: " + item.amount);
+
+    // The skill tree of the item
+    print("Use skill: " + item.use_skill);
+
+    // The current tile of the item
+    print("Tile: " + item.tile);
+
+    // The value of the item in currency
+    print("Value: " + item.value);
+}
+
+// Iterate by index
+for index in 0..inventory.len() {
+    let item = inventory.item_at(index);
+}
+
+// Check if we have an item of the given name
+if inventory.has_item("Mandrake") {}
+
+// Destroy an item of the given name, useful for example in crafting
+if inventory.destroy_item("Mandrake") {}
+
+// Dont forget to set the sheet back
+set_sheet(sheet);
+```
+
+## Managing Wealth
+
+```rust
+let sheet = get_sheet();
+
+// Add one gold to the wealth of the character
+sheet = inventory_add_gold(sheet, 1);
+
+// Add two silver to the wealth of the character
+sheet = inventory_add_silver(sheet, 2);
+
+// Add one gold and two silver to wealth of the character
+sheet = inventory_add_gold_silver(sheet, 2, 1);
+
+// Dont forget to set the sheet back
+set_sheet(sheet);
+```
+
+## Increasing experience
+
+When you successfully killed an enemy, or otherwise completed an objective you may want to increase the characters experience by a certain amount.
+
+```rust
+let sheet = get_sheet();
+
+// Increase the experience by 10
+sheet = increase_experience_by(sheet, 10);
+
+// Dont forget to set the sheet back
+set_sheet(sheet);
+```
+
+## Target Sheets
+
+When you have a target, which for players is acquired via the [Target](../../nodes/#target) node and for NPCs via the [Lookout](../../nodes/#lookout) node, you can also request the target characters sheet.
+
+```rust
+// Get the target sheet
+let target_sheet = get_target_sheet();
+
+// Modify ...
+
+// Set the target sheet back
+set_target_sheet(target_sheet);
+```
+
+In combat you would calculate the damage you deal, get the saving throws and AC from the target and reduct the computed damage from the targets hit_points.
+
+Upon death of the target (if hit_points are equal to 0) you can execute a behavory tree on the target which takes care of the death scenario, see below.
+
+## Executing Behavior
+
+You can execute a behavior tree on the character (or its target) from your scripts:
+
+```rust
+// Execute a tree by its name.
+execute("MyTree");
+
+// Execute a tree on the current target, for example to handle its death
+execute_on_target("onDeath");
+```
+
+## Computing Damage
+
+There are various convenience methods available to help you compute the damage the character deals.
+
+```rust
+let sheet = get_sheet();
+
+// This function does the following:
+// 1. It gets the weapon item in the "main hand" slot
+// 2. It looks up the skill tree of the weapon
+// 3. It retrieves the damage roll from the skill tree for the characters skill level
+// 4. It rolls the damage
+let damage = roll_weapon_damage(sheet, "main hand");
+
+// After reducing the damage, based on the targets AC and saving throws, if there
+// is damage left, reduct it from the targets hit_points and call
+execute_weapon_effects();
+// To visually show the damage (tile effect, audio).
+
+// You should also call "increase_skill_by" on the weapon item skill, see below.
+```
+
+## Managing Skills
+
+After successfully using an item (like a weapon), you should increase the skill as defined by the items skill tree.
+
+```rust
+let sheet = get_sheet();
+
+// Get the skill tree for the given weapon.
+let skill_name = get_item_skill(sheet.weapons.slot("main hand"));
+
+// Increase the skill by 1
+sheet = increase_skill_by(sheet, skill_name, 1);
+
+// However, for weapons there is a short cut, you can just use
+sheet = increase_weapon_skill_by(sheet, "main hand", 1);
+
+// Set the sheet back
+set_sheet();
+```
+
+## Sending Messages
+
+You can send messages to both the character and its target.
+
+```rust
+// Send a status message to the character
+send_status_message("You are feeling powerful!");
+
+// Send a status message to the target of the character
+send_status_message_target("Shabby crushed you!");
 ```

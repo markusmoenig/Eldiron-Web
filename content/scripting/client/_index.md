@@ -43,7 +43,7 @@ import "button" as button;
 this.switch_button = button::TextButton("MODERN", rect(28, 28, 80, 20));
 ```
 
-### Basics
+## Basics
 
 ```rust
 // A position on the screen constructed by its x and y coordinates. 0, 0 is the top left corner.
@@ -61,7 +61,7 @@ let color = rgb(200, 120, 32);
 let color = rgba(200, 120, 32, 128);
 ```
 
-### Drawing
+## Drawing
 
 The name of the tilemaps or images is the same as in the asset view of Eldiron Creator.
 
@@ -156,7 +156,7 @@ set_display_mode_2d(true / false);
 set_display_mode_3d(true / false);
 ```
 
-### Sending game commands
+## Sending game commands
 
 The client, based on user input, can send action commands to the server. The server will execute the behavior tree of the same name as the action command. This enables you to map any command to any server character behavior.
 
@@ -179,7 +179,7 @@ For ```action_at_coordinate``` (or any at_coordinate function) you can set the v
 set_valid_mouse_rect(rect);
 ```
 
-### Actions on your Inventory
+## Actions on your Inventory
 
 To execute actions on your inventory (mostly "Look" or "Use" commands etc.), use:
 
@@ -193,7 +193,7 @@ action_inventory("Equip", 1);
 
 Note that you do not equip or drop inventory items directly. You call the behavior tree which handles this behavior. The behavior tree would send back status messages informing the user of the outcome of the action.
 
-### Casting spells
+## Casting spells
 
 Cast a spell in the given direction or location:
 
@@ -205,7 +205,7 @@ spell("Fireball", "East");
 spell_at_coordinate("Fireball");
 ```
 
-### Convenience methods
+## Convenience methods
 
 You can request the character sheet via ```get_sheet``` just like on the server, however often in a certain script module you just want to print the available inventory items or gear. To do this use one of the below convenience methods.
 
@@ -234,7 +234,7 @@ let exp = get_experience();
 
 For more information on character sheets see the server scripting documentation. On the client side character sheets are read-only, there is no way for the client to send updated client sheets back to the server.
 
-### Get the current server Date and Time
+## Get the current server Date and Time
 
 ```rust
 // Get the server date and time.
