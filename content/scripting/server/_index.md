@@ -213,7 +213,7 @@ After successfully using an item (like a weapon), you should increase the skill 
 ```rust
 let sheet = get_sheet();
 
-// Get the skill tree for the given weapon.
+// Get the skill tree name for the given weapon.
 let skill_name = get_item_skill(sheet.weapons.slot("main hand"));
 
 // Increase the skill by 1
@@ -221,6 +221,9 @@ sheet = increase_skill_by(sheet, skill_name, 1);
 
 // However, for weapons there is a short cut, you can just use
 sheet = increase_weapon_skill_by(sheet, "main hand", 1);
+
+// If you want to roll the general current skill for an item, pass the item name to
+let result = roll_item_skill("Shield");
 
 // Set the sheet back
 set_sheet();

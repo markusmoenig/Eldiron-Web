@@ -8,7 +8,7 @@ alwaysopen = false
 
 * [Behavior Tree](#behavior-tree)
 * [Expression](#expression)
-* [Has Target ?](#has-target)
+* [Has Target ?](#has-target-)
 * [Query State](#query-state)
 
 ### Action Nodes
@@ -98,7 +98,11 @@ A use case for example would be to create a light source using the [Light](#ligh
 
 ### Audio
 
+Plays the audio asset defined by its name.
 
+#### Parameter
+
+=* **Audio Name**. The name of the audio to play.
 
 ---
 
