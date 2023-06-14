@@ -140,7 +140,7 @@ sheet = inventory_add_gold_silver(sheet, 2, 1);
 set_sheet(sheet);
 ```
 
-## Increasing experience
+## Increasing Experience
 
 When you successfully killed an enemy, or otherwise completed an objective you may want to increase the characters experience by a certain amount.
 

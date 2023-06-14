@@ -1,5 +1,5 @@
 +++
-title = "Combat"
+title = "Handling Combat"
 weight = 3
 alwaysopen = true
 +++
