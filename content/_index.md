@@ -8,7 +8,7 @@ Eldiron is a cross-platform creator for classic role-playing-games (RPGs). It’
 
 Eldiron is currently under active development and a v1 is planned for 2023. Eldiron is open source and licensed under the MIT.
 
-**The documentation for Eldiron is currently under development on this site**
+{{< youtube FqTC6Yp8tOk >}}
 
 ![Screenshot](region_screenshot.png)
 ![Screenshot](behavior_screenshot.png)
