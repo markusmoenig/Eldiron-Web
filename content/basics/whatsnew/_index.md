@@ -3,6 +3,10 @@ title: "What's New"
 weight: 1
 ---
 
+### First YouTube Video: An Overview of Eldiron (2023-6-15)
+
+[![Eldiron Overview](https://img.youtube.com/vi/FqTC6Yp8tOk/0.jpg)](https://www.youtube.com/watch?v=FqTC6Yp8tOk)
+
 ### v0.8.0 (2023-6-1)
 
 Eldiron Creator v0.8.0 for Windows and Linux (.deb) is now live at https://github.com/markusmoenig/Eldiron/releases/tag/v0.8.0. macOS version as always via [TestFlight](https://testflight.apple.com/join/50oZ5yds).
