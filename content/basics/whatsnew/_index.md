@@ -3,6 +3,12 @@ title: "What's New"
 weight: 1
 ---
 
+### v0.8.1 (2023-6-16)
+
+Some bugfixes and adjusted some script functions to make the API more coherent.
+
+Better Xcode integration.
+
 ### First YouTube Video: An Overview of Eldiron (2023-6-15)
 
 {{< youtube FqTC6Yp8tOk >}}
