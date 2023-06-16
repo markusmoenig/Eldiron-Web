@@ -1,6 +1,6 @@
 +++
 title = "Item based Skills"
-weight = 5
+weight = 6
 alwaysopen = true
 +++
 

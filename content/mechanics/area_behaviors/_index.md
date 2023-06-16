@@ -1,6 +1,6 @@
 +++
 title = "Area Behavior"
-weight = 6
+weight = 2
 alwaysopen = true
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "Handling Combat"
-weight = 3
+weight = 4
 alwaysopen = true
 +++
 
