@@ -3,6 +3,19 @@ title: "What's New"
 weight: 1
 ---
 
+### v0.8.2 (2023-6-22)
+
+Mostly a maintenance release.
+
+New Features
+
+* Scrollbars for the node lists, tile-map view and tile-selection view.
+* The character position dialog now has an overview map you can use for fast scrolling.
+
+Bugfixes
+
+* User reported bugfixes related to regions and the character position dialog.
+
 ### v0.8.1 (2023-6-16)
 
 Some bugfixes and adjusted some script functions to make the API more coherent.
