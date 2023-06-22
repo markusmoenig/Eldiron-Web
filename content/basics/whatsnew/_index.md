@@ -5,12 +5,12 @@ weight: 1
 
 ### v0.8.2 (2023-6-22)
 
-Mostly a maintenance release.
+Mostly a maintenance release. Scrollbars and fast navigation for regions have been added to all views where necessary. On some Linux systems Rusts winit does not support device scroll events, making it necessary to have scrollbars as fallback.
 
 New Features
 
 * Scrollbars for the node lists, tile-map view and tile-selection view.
-* The character position dialog now has an overview map you can use for fast scrolling.
+* The character position dialog now has an overview map you can use for fast navigation.
 
 Bugfixes
 
