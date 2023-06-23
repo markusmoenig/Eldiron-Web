@@ -15,4 +15,4 @@ Eldiron is currently under active development and a v1 is planned for 2023. Eldi
 
 # Sponsors
 
-[![Digital Ocean](./DO_Logo_Horizontal_Blue.png)](https://www.digitalocean.com/?utm_medium=opensource&utm_source=Eldiron)
+[![Digital Ocean](./DO_Logo_Horizontal_Blue.png?lightbox=false)](https://www.digitalocean.com/?utm_medium=opensource&utm_source=Eldiron)
