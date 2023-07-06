@@ -102,6 +102,17 @@ set_tile_size(41);
 let curr_tile_size = get_tile_size();
 ```
 
+Drawing images works similar.
+
+```rust
+// Get an image
+let logo = get_images().get("eldiron_logo");
+
+// Draws the image with the given width and height and a blend factor.
+// 1.0 is full opacity, 0.0 is fully transparent.
+draw_image(pos(10, 10), logo, 200, 200, 1.0);
+```
+
 You can also request the screen dimensions of the client with
 
 ```rust
