@@ -254,7 +254,13 @@ server {
 }
 ```
 
-Finally, restart Nginx:
+Finally, reload Nginx:
+
+```bash
+nginx -s reload
+```
+
+If systemd is supported, prefer to use below command instead:
 
 ```bash
 systemctl reload nginx
