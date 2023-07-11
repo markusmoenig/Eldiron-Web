@@ -55,7 +55,7 @@ pkg-config --libs --cflags alsa
 
 ## Build the server
 
-Once you have the source code ready, whatever it's from the official Eldiron repository or your own forks, it's time to build the server.
+Once you have the source code ready, whether it's from the official Eldiron repository or your own forks, it's time to build the server.
 
 Change your working directory to the root folder of the source. The building process is simple:
 
@@ -65,11 +65,11 @@ cargo build --release -p server
 
 Hooray! You get an executable named `server` under `your-source-root/target/release` now.
 
-There are various ways to deploy this server executable depends on the system you choose. For systems with `systemd` support, we recommend writing a systemd service for your server process.
+There are various ways to deploy this server executable. For systems with `systemd` support, we recommend writing a systemd service for your server process.
 
 ### Eldiron-Cli
 
-We provide a command line tool named [`eldiron-cli`](https://github.com/fralonra/eldiron-cli) which helps you with the above steps if you're not familiar working with shell. This cli tool provides an interactive interface to build your server from scratch, and deploy your server using systemd if it is available on your system.
+We provide a command line tool named [`eldiron-cli`](https://github.com/fralonra/eldiron-cli) which helps you with the above steps if you're not familiar with working with the terminal. This cli tool provides an interactive interface to build your server from scratch, and deploy your server using systemd if it is available on your system.
 
 Install `eldiron-cli`:
 
