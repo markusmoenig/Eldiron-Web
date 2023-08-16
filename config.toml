@@ -10,6 +10,12 @@ theme = "hugo-theme-relearn"
 home = [ "HTML", "RSS", "SEARCH"]
 
 [[menu.shortcuts]]
+name = "<i class='fas fa-fw fa-home'></i> About me"
+identifier = "home"
+url = "https://moenig.io"
+weight = 0
+
+[[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "gh"
 url = "https://github.com/markusmoenig/Eldiron"
