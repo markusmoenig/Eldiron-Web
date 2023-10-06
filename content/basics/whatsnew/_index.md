@@ -3,6 +3,22 @@ title: "What's New"
 weight: 1
 ---
 
+---
+
+### Rewrite of the Creator in Progress (2023-9-6)
+
+After v0.8.4 I decided to rewrite the Creator part of Eldiron.
+
+While I was very happy with the underlying systems, especially the heart of it all, the behavior node system, I was not happy with the UI of the Creator itself.
+
+The Creator was too disjointed. It is logically structured into different sections but it is not productive (or fun) to create behaviors for characters or items “blind” without connection to their usage in the map / game.
+
+I am currently redoing the Creator with a heavy focus on being map centered, i.e. you create the game interacting with items on the map with live previews / gaming and debugging for every single item.
+
+I think this will make for a much more fun experience as you develop the game interactively on the map instead of developing each item in a vacuum.
+
+The current release still contains the old Creator, while v0.9.0 with the new creator is targetted to be released at the end of 2023.
+
 ### v0.8.2 (2023-6-22)
 
 Mostly a maintenance release. Scrollbars and fast navigation for regions have been added to all views where necessary. On some Linux systems Rusts winit does not support device scroll events, making it necessary to have scrollbars as fallback.
