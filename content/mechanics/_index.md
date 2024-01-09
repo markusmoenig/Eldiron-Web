@@ -2,6 +2,7 @@
 title = "Mechanics"
 weight = 2
 alwaysopen = false
+draft = true
 +++
 
 All game mechanics in Eldiron are either handled via behavior trees or [scripts](../scripting/).

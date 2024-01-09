@@ -51,6 +51,7 @@ url = "https://twitter.com/EldironRPG"
 weight = 6
 
 [params]
+  googleAnalytics = "G-QD6DM30XS1"
   # This controls whether submenus will be expanded (true), or collapsed (false) in the
   # menu; if no setting is given, the first menu level is set to false, all others to true;
   # this can be overridden in the pages frontmatter

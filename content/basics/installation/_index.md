@@ -17,7 +17,7 @@ Once Eldiron v1.0 is released it should also become available on Steam.
 ### Building Eldiron Locally
 
 If you have [Rust installed](https://www.rust-lang.org/tools/install), you can build Eldiron simply via
-```cargo build --release --bin creator_main```
+```cargo build --release --bin creator```
 
 Linux:
 

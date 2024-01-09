@@ -7,7 +7,7 @@ weight = 1
 
 Eldiron consists of [Eldiron Creator](../creator/), a desktop application available for macOS, Windows and Linux, and various clients (and a server) which will run the created games on nearly any device.
 
-Eldiron v1.0 is under active development and scheduled for 2023. V1 will be able to create games similar to Ultima 4 and 5 (or any game using square tiles) including 3D retro regions and multi-player servers.
+Eldiron v1.0 is under active development and scheduled for the first half of 2024. V1 will be able to create games similar to Ultima 4 and 5 (or any game using square tiles) including 3D retro regions and multi-player servers.
 
 Later goals are support for more perspectives (like isometric) and much more.
 
