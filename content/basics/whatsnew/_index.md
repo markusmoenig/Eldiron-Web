@@ -3,6 +3,16 @@ title: "What's New"
 weight: 1
 ---
 
+![CodeGrid](./character_screenshot.png?classes=left)
+
+### First Eldiron Test Release (January 12th, 2023)
+
+The first early test release for the new code base (v0.86) is available on  [GitHub](https://github.com/markusmoenig/Eldiron/releases).
+
+This release has many missing features and is not yet ready for production use. It is meant for testing and feedback only.
+
+---
+
 ![CodeGrid](./codegrid1.png?classes=left)
 
 ### Eldiron Rewrite: Visual Scripting (December 12th, 2023)

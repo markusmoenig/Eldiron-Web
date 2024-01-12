@@ -12,7 +12,7 @@ Eldiron is open source and licensed under the MIT.
 
 ### Rewrite of Eldiron in Progress
 
-I am in the process of rewriting Eldiron, the current release on GitHub still reflects the old code base. The first release for the new code base (v0.85) will be released soon.
+The first early test release for the new code base (v0.86) is available on  [GitHub](https://github.com/markusmoenig/Eldiron/releases)
 
 The documentation on this site will soon be updated to reflect the new code base as well.
 
