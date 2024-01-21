@@ -3,7 +3,19 @@ title: "What's New"
 weight: 1
 ---
 
-![CodeGrid](./character_screenshot.png?classes=left)
+### Eldiron v0.8.8 and Video (January 21st, 2023)
+
+Eldiron v0.8.8 is now available on [GitHub](https://github.com/markusmoenig/Eldiron/releases).
+
+Here is a short video about the new concepts in the new codebase.
+
+First, when I select a character instance, you see the visual, grid based scripting language which I wrote for Eldiron which I call CodeGridFX. You can visually see how the values change as the server is running. The NPC moves around based on a pulse counter, the player character moves on keyboard based input.
+
+The other new concept is that Eldiron Creator is now build from the ground up for live editing. Meaning you can play your game while you create it. When I change the region by drawing wall tiles, the NPC becomes trapped, when I remove them via Undo, the NPC can move again. This will make it a fun way to create your game interactively while you play it (or you play it while you create it ?).
+
+{{< youtube hrhmtCG9ePw >}}
+
+---
 
 ### First Eldiron Test Release (January 12th, 2023)
 

@@ -10,18 +10,15 @@ Eldiron is open source and licensed under the MIT.
 
 ---
 
-### Rewrite of Eldiron in Progress
+The first early test releases for the new code base are available on [GitHub](https://github.com/markusmoenig/Eldiron/releases).
 
-The first early test release for the new code base (v0.86) is available on  [GitHub](https://github.com/markusmoenig/Eldiron/releases)
-
-The documentation on this site will soon be updated to reflect the new code base as well.
+If you want to support the Eldiron project, please consider joining my [Patreon](https://www.patreon.com/eldiron).
 
 ---
 
 ![Screenshot](character_screenshot.png)
-![Screenshot](tilemap_screenshot.png)
 
-<!-- {{< youtube FqTC6Yp8tOk >}} -->
+{{< youtube hrhmtCG9ePw >}}
 
 # Sponsors
 
