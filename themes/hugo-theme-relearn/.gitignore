@@ -1,6 +1,8 @@
 .DS_Store
+.githooks/hooks.log
 .hugo_build.lock
+docs/public*
 exampleSite/public*
-exampleSite/hugo*.exe
-images/hero.xcf
-images/hero.zip
+hugo*.exe
+*.xcf
+*.zip

@@ -1,6 +1,8 @@
 +++
 title = "Getting Started"
 weight = 1
+draft = true
+
 +++
 
 [Eldiron](https://eldiron.com) is a cross-platform creator for classic role-playing-games (RPGs). It's main aim is to create games similar to the RPGs of the 80's and 90's but with modern features as well as support for single and multi-player experiences.
