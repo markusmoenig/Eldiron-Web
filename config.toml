@@ -22,33 +22,39 @@ url = "https://github.com/markusmoenig/Eldiron"
 weight = 1
 
 [[menu.shortcuts]]
+name = "<i class='fa-solid fa-download'></i> Download"
+identifier = "dl"
+url = "https://github.com/markusmoenig/Eldiron/releases"
+weight = 2
+
+[[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-youtube'></i> YouTube"
 identifier = "yt"
 url = "https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA"
-weight = 2
+weight = 3
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-patreon'></i> Patreon"
 identifier = "patreon"
 url = "https://patreon.com/eldiron"
-weight = 3
+weight = 4
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-discord'></i> Discord"
 identifier = "discord"
 url = "https://discord.gg/ZrNj6baSZU"
-weight = 4
+weight = 5
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-x-twitter'></i> EldironRPG"
 identifier = "twitter"
 url = "https://x.com/EldironRPG"
-weight = 5
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
-url = "more/credits/"
 weight = 6
+
+# [[menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+# url = "more/credits/"
+# weight = 7
 
 [params]
 googleAnalytics = "G-QD6DM30XS1"
