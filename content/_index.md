@@ -1,5 +1,6 @@
 ---
 title: ""
+description: "Eldiron, a creator for classical RPGs."
 ---
 
 ![Eldiron Map](./coverlarge.png)

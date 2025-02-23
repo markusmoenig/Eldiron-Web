@@ -41,4 +41,6 @@ With the **first public versions released in February 2025**, I’m confident th
 
 ![Eldiron v3](screenshot.png)
 
-**Markus, Feb 2025**
+---
+
+If you’d like to support the **Eldiron** project, please consider joining my [Patreon](https://www.patreon.com/eldiron). Your support helps me continue development, commission tilesets, host databases and forums, and more.
