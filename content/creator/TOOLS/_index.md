@@ -28,7 +28,7 @@ You can navigate the map using:
 - **Trackpad**: Swipe to move around.
 - **Arrow keys**: Move the view in any direction.
 - **Mini-map**: Click on the mini-map in the **Region** section to jump to a location.
-- **Mouse wheel**: Zoom in and out.
+- **Mouse wheel / Trackpad + Ctrl (Mac: Command)**: Zoom in and out.
 
 ### HUD Overview
 
