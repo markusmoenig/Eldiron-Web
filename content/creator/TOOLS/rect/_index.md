@@ -4,8 +4,6 @@ weight: 5
 description: "Eldiron Creator: Rect Tool"
 ---
 
-## Rect Tool
-
 The **Rect Tool** (keyboard shortcut **'R'**) allows you to **directly draw tiles** onto the map.
 
 Unlike other map-based tools, the **Rect Tool does not edit geometry**—instead, it **instantly places selected tiles, materials, or colors** into the map grid.
