@@ -13,7 +13,9 @@ Eldiron is open-source and licensed under the **MIT License**.
 
 The **first alpha version**, featuring the new **Doom-style editor**, is now available! I’m currently working on documentation and tutorial videos—stay tuned!
 
-![Eldiron Screenshot](./screenshot.png)
+2D Example           | 3D First Person Example
+:-------------------------:|:-------------------------:
+![Eldiron Screenshot](./screenshot_harbor_2d.png)  |  ![Eldiron Screenshot](./screenshot.png)
 
 ### Features of v1:
 

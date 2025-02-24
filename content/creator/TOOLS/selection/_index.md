@@ -4,8 +4,6 @@ weight: 1
 description: "Eldiron Creator: Selection Tool"
 ---
 
-## Selection Tool
-
 The **Selection Tool** (keyboard shortcut **'S'**) allows you to **quickly select, edit, and delete geometry** in the map.
 
 Unlike the **Vertex, Linedef, and Sector Tools**, which only allow selecting one type of geometry at a time, the **Selection Tool** lets you select **vertices, linedefs, and sectors** simultaneously.
