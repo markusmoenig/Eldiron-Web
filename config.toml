@@ -40,16 +40,21 @@ url = "https://patreon.com/eldiron"
 weight = 4
 
 [[menu.shortcuts]]
+name = "<i class='fa-solid fa-fw fa-bag-shopping'></i> Shop"
+url = "more/shop/"
+weight = 5
+
+[[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-discord'></i> Discord"
 identifier = "discord"
 url = "https://discord.gg/ZrNj6baSZU"
-weight = 5
+weight = 6
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-x-twitter'></i> EldironRPG"
 identifier = "twitter"
 url = "https://x.com/EldironRPG"
-weight = 6
+weight = 7
 
 # [[menu.shortcuts]]
 # name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
