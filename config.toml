@@ -5,10 +5,6 @@ title = 'Eldiron RPG Creator'
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-relearn"
 
-# For search functionality
-[outputs]
-home = ["HTML", "RSS", "SEARCH"]
-
 #[[menu.shortcuts]]
 #name = "<i class='fas fa-fw fa-home'></i> About me"
 #identifier = "home"
@@ -71,8 +67,6 @@ alwaysopen = true
 # Useful to give opportunity to people to create merge request for your doc.
 # See the config.toml file from this documentation site to have an example.
 editURL = ""
-# Author of the site, will be used in meta information
-author = "Markus Moenig"
 # Shows a checkmark for visited pages on the menu
 showVisitedLinks = false
 # Disable search function. It will hide search bar
@@ -102,14 +96,10 @@ disableLanguageSwitchingButton = false
 disableBreadcrumb = true
 # If set to true, hide table of contents menu in the header of all pages
 disableToc = false
-# If set to false, load the MathJax module on every page regardless if a MathJax shortcode is present
-disableMathJax = false
 # Specifies the remote location of the MathJax js
 customMathJaxURL = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 # Initialization parameter for MathJax, see MathJax documentation
 mathJaxInitialize = "{}"
-# If set to false, load the Mermaid module on every page regardless if a Mermaid shortcode or Mermaid codefence is present
-disableMermaid = false
 # Specifies the remote location of the Mermaid js
 customMermaidURL = "https://unpkg.com/mermaid/dist/mermaid.min.js"
 # Initialization parameter for Mermaid, see Mermaid documentation
@@ -138,3 +128,7 @@ additionalContentLanguage = ["en"]
 disableExplicitIndexURLs = false
 # For external links you can define how they are opened in your browser; this setting will only be applied to the content area but not the shortcut menu
 externalLinkTarget = "_blank"
+
+[params.author]
+# Author of the site, will be used in meta information
+author = "Markus Moenig"

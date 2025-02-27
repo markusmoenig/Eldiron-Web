@@ -156,4 +156,4 @@ Using the **Data Tool** is **often more convenient** than setting attributes in 
 
 ## Learn More
 
-See the **[Scripting & Data Reference]()** for a complete list of available **events, commands, actions, and data properties**.
+See the **[Scripting & Data Reference](/scripting_data)** for a complete list of available **events, commands, actions, and data properties**.
