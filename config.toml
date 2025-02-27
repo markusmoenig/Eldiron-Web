@@ -58,7 +58,7 @@ weight = 7
 # weight = 7
 
 [params]
-googleAnalytics = "G-QD6DM30XS1"
+googleAnalytics = "G-35R29223CG"
 # This controls whether submenus will be expanded (true), or collapsed (false) in the
 # menu; if no setting is given, the first menu level is set to false, all others to true;
 # this can be overridden in the pages frontmatter
