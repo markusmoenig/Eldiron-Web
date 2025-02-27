@@ -32,7 +32,7 @@ The **first alpha version**, featuring the new **Doom-style editor**, is now ava
 
 ---
 
-If you’d like to support the **Eldiron** project, please consider joining my [Patreon](https://www.patreon.com/eldiron). Your support helps me continue development, commission tilesets, host databases and forums, and more.
+If you’d like to support the **Eldiron** project, please consider joining my [Patreon](https://www.patreon.com/eldiron) or send a [Donation](https://www.paypal.me/markusmoenigos). Your support helps me continue development, commission tilesets, host databases and forums, and more.
 
 ---
 

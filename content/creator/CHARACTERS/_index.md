@@ -21,7 +21,7 @@ There are two tools available for editing character templates:
 
 Both tools **overlap** in functionality. You could set all attributes via **code** in the **startup event**, but the **Data Tool** provides a **more convenient** way to configure the initial state of a character.
 
-> [!TIP]
+> [!INFO]
 > Currently, the **Code Tool** supports only **Python scripting**. A **visual, node-based scripting alternative** will be available before v1.
 
 ---

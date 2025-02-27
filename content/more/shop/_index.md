@@ -9,6 +9,8 @@ You can help support the **Eldiron project** by purchasing **high-quality tilese
 
 These **carefully crafted tilesets** are designed to give you a **head start** in your **Eldiron adventure**, whether you're creating **2D, isometric, or first-person RPGs**.
 
+<!-- If you want to send a **one-time donation**, you can do so through my [PayPal](https://www.paypal.me/markusmoenigos). -->
+
 ### Why Buy from the Eldiron Shop?
 
 - **Premium Quality**: The tilesets are professionally designed for Eldiron, ensuring **consistent style and high detail**.
