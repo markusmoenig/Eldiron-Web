@@ -89,6 +89,10 @@ These commands can be used for both **characters** and **items**:
 # Send a debug message to the Log.
 debug(arg1, arg2, ...)
 
+# Return a list of entity ids within the radius of the character or item.
+# This has many use cases, like a door checking if it can close as no players overlap.
+entities_in_radius(radius)
+
 # Return the name of the sector the character or item is in.
 get_sector_name()
 
@@ -102,7 +106,7 @@ set_attr("key", value)
 
 ### Commands for Characters Only
 
-These commands are **exclusive to characters** and are primarily used for **NPC behavior**:
+These commands are **exclusive to characters**:
 
 ```python
 # Loop: Walks the character in a random direction for the given distance and speed.
