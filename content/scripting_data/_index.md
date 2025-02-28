@@ -91,7 +91,7 @@ debug(arg1, arg2, ...)
 
 # Return a list of entity ids within the radius of the character or item.
 # This has many use cases, like a door checking if it can close as no players overlap.
-entities_in_radius(radius)
+entities_in_radius()
 
 # Return the name of the sector the character or item is in.
 get_sector_name()
