@@ -25,7 +25,7 @@ The attributes can be set inside the templates or the [instance scripts](/creato
 
 ```python
 # Give the character or item a name (if they differ from the template)
-set_name("Orc")
+set_attr("name", "Golden Key")
 
 # Set the tile ID for the character or item. Get the tile ID from the tile-picker.
 set_tile("tile_id")
@@ -89,6 +89,9 @@ These commands can be used for both **characters** and **items**:
 # Send a debug message to the Log.
 debug(arg1, arg2, ...)
 
+# Get an attribute of the current character or item.
+get_attr("key")
+
 # Return a list of entity ids within the radius of the character or item.
 # This has many use cases, like a door checking if it can close as no players overlap.
 entities_in_radius()
@@ -100,7 +103,7 @@ get_sector_name()
 # By default, one in game minute is one second in real time.
 notify_in(minutes, event_string)
 
-# Set an attribute of a character or item. Value can be any Python value.
+# Set an attribute of the current character or item. Value can be any Python value.
 set_attr("key", value)
 ```
 
@@ -109,6 +112,15 @@ set_attr("key", value)
 These commands are **exclusive to characters**:
 
 ```python
+
+# Get an attribute of the given character.
+get_entity_attr(entity_id, "key")
+
+# Returns an array of filtered item ids in the character's inventory.
+# Returns all items if filter_string is empty. Otherwise, returns items whose name
+# or class names contain the filter_string.
+inventory_items(filter_string)
+
 # Loop: Walks the character in a random direction for the given distance and speed.
 # After arrival, sleeps for a random amount of in-game-minutes between 0 and max_sleep.
 # Example: random_walk(1.0, 1.0, 8)
@@ -123,6 +135,19 @@ random_walk_in_sector(speed, max_sleep)
 
 # Register a player character. Only than do they receive user inputevents from the game.
 register_player()
+
+# Take an item from the region. The item is removed from the region and added to the character's inventory.
+take(item_id)
+```
+
+### Commands for Items Only
+
+These commands are **exclusive to items**:
+
+```python
+
+# Get an attribute of the given item.
+get_item_attr(item_id,"key")
 ```
 
 ### Applying Player Actions
@@ -174,3 +199,23 @@ action("backward")
 # Stop any movement / action.
 action("none")
 ```
+
+## Events
+
+This is a list of events, categorized into **System Events** (sent to `event()`) and **User Events** (sent to `user_event()`).
+
+### System Events
+
+| Event Name             | Value           | Description |
+|------------------------|----------------|-------------|
+| **`startup`**          | *(None)*       | Called when the entity or item is created. |
+| **`bumped_into_entity`** | `entity_id` *(int)* | Triggered when an entity bumps into another entity. |
+| **`bumped_into_item`** | `item_id` *(int)* | Triggered when an entity bumps into an item. |
+| **`bumped_by_entity`** | `entity_id` *(int)* | Triggered when an another entity collides with this entity or item. |
+
+### User Events
+
+| Event Name      | Value      | Description |
+|----------------|-----------|-------------|
+| **`key_down`** | *(string)* | Triggered when a key is pressed. The event sends the value of the pressed key (e.g., `"w"`, `"a"`, `"space"`). |
+| **`key_up`**   | *(string)* | Triggered when a key is released. The event sends the value of the released key (e.g., `"w"`, `"a"`, `"space"`). |
