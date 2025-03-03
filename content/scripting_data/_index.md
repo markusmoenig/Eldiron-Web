@@ -92,6 +92,11 @@ debug(arg1, arg2, ...)
 # Get an attribute of the current character or item.
 get_attr("key")
 
+# Returns an array of filtered item ids of the given character's inventory.
+# Returns all items if filter_string is empty. Otherwise, returns items whose name
+# or class names contain the filter_string.
+inventory_items_of(entity_id, filter_string)
+
 # Return a list of entity ids within the radius of the character or item.
 # This has many use cases, like a door checking if it can close as no players overlap.
 entities_in_radius()
