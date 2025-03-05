@@ -74,16 +74,19 @@ class Gate:
 
 ### **How It Works**
 1. When a character **bumps into the gate**, the `bumped_by_entity` event is triggered.
-2. The script checks if the character **has a "Golden Key"** in their inventory using:
+2. The `value` parameter contains the **ID of the character** that bumped into the gate.
+3. The script checks if that character **has a "Golden Key"** in their inventory using:
    - `inventory_items_of(value, "Golden Key") > 0`
-3. If the character **has the key**, the gate **opens** by setting:
+4. If the character **has the key**, the gate **opens** by setting:
    - `visible = False` (gate disappears).
    - `blocking = False` (gate no longer blocks movement).
-4. The `notify_in(2, "close_gate")` function **delays closing** the gate for **2 seconds**.
-5. When `close_gate` is triggered, the script:
+5. The `notify_in(2, "close_gate")` function **delays closing** the gate for **2 seconds**.
+6. When `close_gate` is triggered, the script:
    - **Checks if the area is empty** (`entities_in_radius() == 0`).
    - If **empty**, the gate **closes** (`visible = True`, `blocking = True`).
    - If **not empty**, it **delays closing** again by **2 seconds**.
 
 > [!TIP]
-> This script can be adapted to check for **different key types** by replacing `"Golden Key"` with another item name.
+> - The `value` parameter in `bumped_by_entity` holds the **ID of the character** who collided with the gate.
+> - We pass this ID to `inventory_items_of(value, "Golden Key")` to **check that specific character's inventory**.
+> - This script can be adapted to check for **different key types** by replacing `"Golden Key"` with another item name.
