@@ -46,3 +46,44 @@ class Door:
 
 > [!NOTE]
 > Setting the `blocking` attribute isn’t strictly necessary in this case, since the door **instantly opens** on contact. However, it is included here for **clarity and flexibility** in different scenarios.
+
+## Opening a Locked Gate
+
+Opening a **locked gate** works similarly to opening a **door**, but with one key difference:
+- The gate **requires a key** to open.
+- On the `bumped_by_entity` event, the script checks if the **character has the correct key** in their inventory.
+
+```python
+# Taken from https://github.com/markusmoenig/Eldiron/blob/master/examples/Harbor.eldiron
+
+class Gate:
+
+    def event(self, event, value):
+        if event == "bumped_by_entity":
+            if len(inventory_items_of(value, "Golden Key")) > 0:
+                set_attr("visible", False)
+                set_attr("blocking", False)
+                notify_in(2, "close_gate")
+        if event == "close_gate":
+            if len(entities_in_radius()) == 0:
+                set_attr("visible", True)
+                set_attr("blocking", True)
+            else:
+                notify_in(2, "close_gate")
+```
+
+### **How It Works**
+1. When a character **bumps into the gate**, the `bumped_by_entity` event is triggered.
+2. The script checks if the character **has a "Golden Key"** in their inventory using:
+   - `inventory_items_of(value, "Golden Key") > 0`
+3. If the character **has the key**, the gate **opens** by setting:
+   - `visible = False` (gate disappears).
+   - `blocking = False` (gate no longer blocks movement).
+4. The `notify_in(2, "close_gate")` function **delays closing** the gate for **2 seconds**.
+5. When `close_gate` is triggered, the script:
+   - **Checks if the area is empty** (`entities_in_radius() == 0`).
+   - If **empty**, the gate **closes** (`visible = True`, `blocking = True`).
+   - If **not empty**, it **delays closing** again by **2 seconds**.
+
+> [!TIP]
+> This script can be adapted to check for **different key types** by replacing `"Golden Key"` with another item name.
