@@ -20,6 +20,8 @@ Game configuration options are located in the `[game]` section.
 target_fps = 30      # The target frames per second for the game.
 game_tick_ms = 250   # The milliseconds per game tick.
 ticks_per_minute = 4 # The amount of ticks per in-game minute.
+
+entity_block_mode = "always" # The block mode, "always" or "never"
 ```
 ### **Option Descriptions**
 
@@ -36,6 +38,14 @@ ticks_per_minute = 4 # The amount of ticks per in-game minute.
   - Defines the **number of ticks per in-game minute**.
   - Default: `4`, meaning **1 in-game minute = 1 real-time second**.
   - To sync in-game time with real time, set this value to **`60 * 4 = 240`**.
+
+- **`entity_block_mode`**
+  - Controls whether **entities (i.e., characters)** can move through each other.
+  - `"always"` → Entities **always block each other**.
+  - `"never"` → Entities **never block each other**.
+
+> [!TIP]
+> A future update will introduce **custom entity block modes** to support **alignment-based blocking** and other movement rules.
 
 ### **Using In-Game Time for Events**
 
