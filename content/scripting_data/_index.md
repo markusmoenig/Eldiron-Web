@@ -92,6 +92,12 @@ debug(arg1, arg2, ...)
 # Get an attribute of the current character or item.
 get_attr("key")
 
+# Get an attribute of the given character.
+get_entity_attr(entity_id, "key")
+
+# Get an attribute of the given item.
+get_item_attr(item_id,"key")
+
 # Returns an array of filtered item ids of the given character's inventory.
 # Returns all items if filter_string is empty. Otherwise, returns items whose name
 # or class names contain the filter_string.
@@ -111,6 +117,12 @@ notify_in(minutes, event_string)
 # Set an attribute of the current character or item. Value can be any Python value.
 set_attr("key", value)
 
+# Enables / disable entity proximity tracking. If enabled, the entity or item will receive
+# "proximity_warning" events with a list of entity ids within the radius.
+# Works similarly to entities_in_radius(), but auto generates events.
+# Use with get_entity_attr() to check for entities to take action on (attack, heal, talk etc).
+set_proximity_tracking(True / False, radius)
+
 # Send a message to the given character.
 tell(entity_id, message)
 ```
@@ -120,9 +132,6 @@ tell(entity_id, message)
 These commands are **exclusive to characters**:
 
 ```python
-
-# Get an attribute of the given character.
-get_entity_attr(entity_id, "key")
 
 # Returns an array of filtered item ids in the character's inventory.
 # Returns all items if filter_string is empty. Otherwise, returns items whose name
@@ -154,9 +163,7 @@ take(item_id)
 These commands are **exclusive to items**:
 
 ```python
-
-# Get an attribute of the given item.
-get_item_attr(item_id,"key")
+# None yet
 ```
 
 ### Applying Player Actions
