@@ -110,6 +110,9 @@ notify_in(minutes, event_string)
 
 # Set an attribute of the current character or item. Value can be any Python value.
 set_attr("key", value)
+
+# Send a message to the given character.
+tell(entity_id, message)
 ```
 
 ### Commands for Characters Only
@@ -127,16 +130,17 @@ get_entity_attr(entity_id, "key")
 inventory_items(filter_string)
 
 # Loop: Walks the character in a random direction for the given distance and speed.
-# After arrival, sleeps for a random amount of in-game-minutes between 0 and max_sleep.
+# After arrival, sleeps for a random amount of in-game-minutes between max_sleep / 2 and max_sleep.
 # Example: random_walk(1.0, 1.0, 8)
 # Mostly used for NPCs
 random_walk(distance, speed, max_sleep)
 
-# Loop: Walks the character to a random position in the current sector for the given distance and speed.
-# In between sleeps the character for a random amount of in-game-minutes between 0 and max_sleep.
+# Loop: Walks the character in a random direction in the current sector for the given distance and speed.
+# In between sleeps the character for a random amount of in-game-minutes between max_sleep / 2 and max_sleep.
+# This command is useful for NPCs that need to move around randomly without leaving a sector (shop etc.)
 # Example: random_walk_in_sector(1.0, 8)
 # Mostly used for NPCs
-random_walk_in_sector(speed, max_sleep)
+random_walk_in_sector(distance, speed, max_sleep)
 
 # Register a player character. Only than do they receive user inputevents from the game.
 register_player()

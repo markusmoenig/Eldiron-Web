@@ -19,7 +19,7 @@ I quickly realized two things: first, **working on Eldiron was incredibly fun**,
 
 I knew I needed to **rework the user interface**, add **scripting and node-based systems**, and create a **universal map editor** that could handle **2D, isometric, and first-person** games.
 
-At this stage, being in **early retirement**, I thought, *why not go all in?* So, I started working on a new version of Eldiron **almost full-time**.
+At this stage, I thought, *why not go all in?* So, I started working on a new version of Eldiron **from scratch**.
 
 ## In the Middle
 
