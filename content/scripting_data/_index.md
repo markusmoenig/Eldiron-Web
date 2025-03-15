@@ -86,6 +86,17 @@ STR = 10
 These commands can be used for both **characters** and **items**:
 
 ```python
+# Block the listed events from being send to the character or item for the given amount
+# of in-game minutes.
+block_events(minutes, "event1", "event2",...)
+
+# Deal damage to the given entity or item identified by its ID.
+# Damage is a Python array of information which gets send to the receiver via an
+# `take_damage` event.
+# Example: deal_damage(id, {"physical": 10})
+# Send all relevant data to the receiver who can calculate the final damage and apply it.
+deal_damage(entity_id | item_id, damage)
+
 # Send a debug message to the Log.
 debug(arg1, arg2, ...)
 
@@ -133,10 +144,18 @@ These commands are **exclusive to characters**:
 
 ```python
 
+# Creates a new item of the given class name and add it to the character's inventory.
+add_item(class_name)
+
 # Returns an array of filtered item ids in the character's inventory.
 # Returns all items if filter_string is empty. Otherwise, returns items whose name
 # or class names contain the filter_string.
 inventory_items(filter_string)
+
+# Drops items in the character's inventory.
+# Drops all items if filter_string is empty. Otherwise, drops items whose name
+# or class names contain the filter_string.
+drop_items(filter_string)
 
 # Loop: Walks the character in a random direction for the given distance and speed.
 # After arrival, sleeps for a random amount of in-game-minutes between max_sleep / 2 and max_sleep.
@@ -228,6 +247,7 @@ This is a list of events, categorized into **System Events** (sent to `event()`)
 | **`bumped_into_entity`** | `entity_id` *(int)* | Triggered when an entity bumps into another entity. |
 | **`bumped_into_item`** | `item_id` *(int)* | Triggered when an entity bumps into an item. |
 | **`bumped_by_entity`** | `entity_id` *(int)* | Triggered when an another entity collides with this entity or item. |
+| **`take_damage`** | `entity_id` *dict* | Send by an deal_damage cmd. The dictionary is the data passed to deal_damage. |
 
 ### User Events
 
