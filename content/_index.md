@@ -17,6 +17,12 @@ The **first alpha version**, featuring the new **Doom-style editor**, is now ava
 :-------------------------:|:-------------------------:
 ![Eldiron Screenshot](./screenshot_harbor_2d.png)  |  ![Eldiron Screenshot](./screenshot.png)
 
+---
+
+{{< youtube "-eDhvO_u0OU?si=CqLF1ZF4xQogGX7z" >}}
+
+---
+
 ### Features of v1:
 
 - **Enhanced Doom-style editor** with linedefs and sectors for creating maps. **70% Done**.
@@ -35,10 +41,6 @@ The **first alpha version**, featuring the new **Doom-style editor**, is now ava
 If you’d like to support the **Eldiron** project, please consider joining my [Patreon](https://www.patreon.com/eldiron) or send a [Donation](https://www.paypal.me/markusmoenigos). Your support helps me continue development, commission tilesets, host databases and forums, and more.
 
 ---
-
-<!-- ![Screenshot](character_screenshot.png) -->
-
-<!-- {{< youtube hrhmtCG9ePw >}} -->
 
 # Sponsors
 
