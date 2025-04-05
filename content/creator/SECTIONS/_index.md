@@ -1,5 +1,5 @@
 ---
-title: "SECTIONS"
+title: "Sections"
 weight: 1
 description: "Eldiron Creator: Sections"
 ---
@@ -9,6 +9,8 @@ description: "Eldiron Creator: Sections"
 **Regions** represent **levels or world maps** in your game.
 
 To create a new region, press the **+** button in the **Region** section. Once created, you can immediately start designing your level using map tools such as **Linedef, Sector, and Rect**.
+
+---
 
 ## Character
 
@@ -23,6 +25,8 @@ Refer to the **Scripting & Data** chapter for more details on these tools.
 
 Characters act as **templates**—you can create an instance of a character by **dragging it from the Character section onto the map**.
 
+---
+
 ## Item
 
 An **Item** is an object in your game that can be **picked up** or **interacted with** by entities.
@@ -35,6 +39,8 @@ To create an item, press the **+** button in the **Item** section.
 Like characters, **items serve as templates**—dragging them from the Item section onto the map creates an instance.
 
 Items are **highly flexible**. They can be **static** or **interactive** (e.g., lighting a torch, displaying a message, triggering an event).
+
+---
 
 ## Tileset
 
@@ -53,3 +59,17 @@ Using the **Tileset Tool**, you can:
 - Only added tiles can be used as **map elements**.
 
 For more details, see the **Tileset Tool** documentation.
+
+---
+
+## Screen
+
+A **Screen** defines what the player sees during gameplay and serves as the **UI layer** for your game.
+
+To create a screen, press the **+** button in the **Screen** section.
+
+- Use the regular **map-based tools** to design screen elements.
+- Each **sector** acts as a **widget**—give it a name, and it will appear in the Screen's content list as a selectable item.
+- Widget properties can be set using the **Data Tool**.
+
+For more details, see the [Screens & Widgets](/screens_widgets) chapter.

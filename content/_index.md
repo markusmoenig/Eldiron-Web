@@ -23,19 +23,18 @@ The **first alpha version**, featuring the new **Doom-style editor**, is now ava
 
 ---
 
-### Features of v1:
+### Features of v1
 
-- **Enhanced Doom-style editor** with linedefs and sectors for creating maps. **70% Done**.
-  - The editor is also used to create **procedural character/item models and materials**.
-  - Includes a **full set of tools** (Selection, Vertex, Linedef, Sector, Rect).
-  - Apply effects like **various light sources and particles** to the map.
+- **Doom-style World Editor** for building levels with linedefs and sectors. **70% Done**
+  - Also used to design **procedural characters, items, and materials**
+  - Packed with powerful tools: **Selection, Vertex, Linedef, Sector, Rect**
+  - Supports **dynamic effects** like light sources and particle systems
 
-- **Python-powered scripting system** for creating advanced logic for characters and items. **50% Done**.
-  - **Modules** are Python classes that can be used via scripting or within the **node-based visual scripting system**. **0% Done**.
+- **Python-based scripting system** to power deep game logic. **60% Done**
+  - Use Python **modules** directly or plug them into a **visual node editor** (coming soon) **0% Done**
 
-- **Tilesets**: Use your own or the supplied **Eldiron tileset** for your games. **100% Done**.
-- **Rendering**: Supports **2D, Isometric, and First-Person** rendering. **100% Done**.
-
+- **Flexible Tileset System** — Use your own tilesets**. **100% Done**
+- **Multi-perspective Rendering** — Create games in **2D, Isometric, or First-Person** views. **100% Done**
 ---
 
 If you’d like to support the **Eldiron** project, please consider joining my [Patreon](https://www.patreon.com/eldiron) or send a [Donation](https://www.paypal.me/markusmoenigos). Your support helps me continue development, commission tilesets, host databases and forums, and more.

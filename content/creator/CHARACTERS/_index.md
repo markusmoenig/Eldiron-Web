@@ -1,5 +1,5 @@
 ---
-title: "CHARACTERS"
+title: "Characters"
 weight: 3
 description: "Eldiron Creator: Characters"
 ---
@@ -76,12 +76,10 @@ class Player:
 
     def event(self, event, value):
         if event == 'startup':
-            register_player()
             set_attr("STR", 10)
 ```
 
 In this example:
-- The character is **registered as a player** (receives user input events).
 - The **STR (Strength) attribute** is set to **10**.
 
 ### User Events

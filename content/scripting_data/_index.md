@@ -1,5 +1,5 @@
 ---
-title: "SCRIPTING & DATA"
+title: "Scripting & Data"
 weight: 4
 description: "Scripting & Data Reference"
 ---
@@ -64,6 +64,11 @@ visible = false
 
 # Change the collision radius for characters and items (default is 0.5)
 radius = 0.3
+
+# Character specific
+
+# Register the character as a player character which receives user events
+player = true
 
 # Item specific
 
@@ -134,8 +139,9 @@ set_attr("key", value)
 # Use with get_entity_attr() to check for entities to take action on (attack, heal, talk etc).
 set_proximity_tracking(True / False, radius)
 
-# Send a message to the given character.
-tell(entity_id, message)
+# Send a message to the given character. Category is optional and used for coloring
+# messages in the message widget (see Screens & Widgets).
+message(entity_id, message, category)
 ```
 
 ### Commands for Characters Only
@@ -169,9 +175,6 @@ random_walk(distance, speed, max_sleep)
 # Example: random_walk_in_sector(1.0, 8)
 # Mostly used for NPCs
 random_walk_in_sector(distance, speed, max_sleep)
-
-# Register a player character. Only than do they receive user inputevents from the game.
-register_player()
 
 # Take an item from the region. The item is removed from the region and added to the character's inventory.
 take(item_id)
@@ -207,7 +210,7 @@ def user_event(self, event, value):
 ```
 
 > [!NOTE]
-> Player characters must be registered using the `register_player` command.
+> Player characters must be registered using the `player = true` in the characters data.
 
 > [!TIP]
 > These movement commands are **camera-independent** and work for **2D, isometric, and first-person cameras**.
@@ -243,11 +246,12 @@ This is a list of events, categorized into **System Events** (sent to `event()`)
 
 | Event Name             | Value           | Description |
 |------------------------|----------------|-------------|
-| **`startup`**          | *(None)*       | Called when the entity or item is created. |
+| **`startup`**            | *(None)*        | Called when the entity or item is created. |
 | **`bumped_into_entity`** | `entity_id` *(int)* | Triggered when an entity bumps into another entity. |
-| **`bumped_into_item`** | `item_id` *(int)* | Triggered when an entity bumps into an item. |
-| **`bumped_by_entity`** | `entity_id` *(int)* | Triggered when an another entity collides with this entity or item. |
-| **`take_damage`** | `entity_id` *dict* | Send by an deal_damage cmd. The dictionary is the data passed to deal_damage. |
+| **`bumped_into_item`**   | `item` *(int)*   | Triggered when an entity bumps into an item. |
+| **`bumped_by_entity`**   | `entity_id` *(int)* | Triggered when another entity collides with this entity or item. |
+| **`clicked`**            | *dict* `{ entity_id, distance }` | Triggered when the player clicks on an entity or item. Includes the clicking entity's ID and distance. |
+| **`take_damage`**        | *dict*           | Triggered by the `deal_damage` command. The dictionary contains the data passed to `deal_damage()`. |
 
 ### User Events
 

@@ -1,5 +1,5 @@
 ---
-title: "TOOLS"
+title: "Tools"
 weight: 2
 description: "Eldiron Creator: Tools"
 ---

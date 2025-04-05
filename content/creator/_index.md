@@ -1,9 +1,8 @@
 ---
-title: "CREATOR"
+title: "Eldiron Creator"
 weight: 3
+description: "Eldiron Creator"
 ---
-
-## Eldiron Creator
 
 **Eldiron Creator** is where everything comes together—a **graphical editor** that lets you build your own adventures.
 

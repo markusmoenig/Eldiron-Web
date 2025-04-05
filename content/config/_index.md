@@ -1,9 +1,8 @@
 ---
-title: "CONFIGURATION"
-weight: 5
+title: "Configuration"
+weight: 6
 description: "Configuration Reference"
 ---
-
 
 ## Configuring Eldiron
 
@@ -17,11 +16,14 @@ Game configuration options are located in the `[game]` section.
 
 ```toml
 [game]
-target_fps = 30      # The target frames per second for the game.
-game_tick_ms = 250   # The milliseconds per game tick.
-ticks_per_minute = 4 # The amount of ticks per in-game minute.
-
-entity_block_mode = "always" # The block mode, "always" or "never"
+[game]
+target_fps = 30                # The target frames per second for the game.
+game_tick_ms = 250             # The milliseconds per game tick.
+ticks_per_minute = 4           # The amount of ticks per in-game minute.
+entity_block_mode = "always"   # The block mode, "always" or "never".
+auto_create_player = true      # Whether to auto-create a player entity.
+start_region = ""              # The name of the region to start the game in.
+start_screen = ""              # The name of the screen to show at startup.
 ```
 ### **Option Descriptions**
 
@@ -43,6 +45,20 @@ entity_block_mode = "always" # The block mode, "always" or "never"
   - Controls whether **entities (i.e., characters)** can move through each other.
   - `"always"` → Entities **always block each other**.
   - `"never"` → Entities **never block each other**.
+
+- **`auto_create_player`**
+  If `true`, Eldiron will automatically **create a player instance** in the map if one is defined.
+  Useful for quickly testing and building games without needing to implement a full character creation process.
+  If `false`, the player must be created manually—typically using a **screen** and **user input flow**.
+
+- **`start_region`**
+  The **name of the region** the game will load when it starts.
+  If `start_screen` is not set, this first region will be shown by default.
+
+- **`start_screen`**
+  The **name of the screen** to load on startup.
+  If empty, Eldiron will display a black screen.
+
 
 > [!TIP]
 > A future update will introduce **custom entity block modes** to support **alignment-based blocking** and other movement rules.
@@ -75,3 +91,26 @@ sample_mode = "nearest" # "nearest" or "linear"
   - `"nearest"` → **Nearest-neighbor interpolation** (best for pixel art).
   - `"linear"` → **Bilinear interpolation** (better for high-resolution textures).
   - **Recommendation:** Use `"nearest"` for pixel art games to preserve crisp edges.
+
+---
+
+## Viewport Configuration
+
+Viewport configuration defines the resolution and grid used when the game starts.
+
+```toml
+[viewport]
+width = 1280        # Width of the game viewport in pixels.
+height = 720        # Height of the game viewport in pixels.
+grid_size = 32      # Size of one grid tile in pixels.
+```
+
+  ### **Option Descriptions**
+
+  - **`width` / `height`**
+    Defines the **starting resolution** of the game window or screen.
+    You can adjust these values to target common resolutions like 1280×720 or 1920×1080.
+
+  - **`grid_size`**
+    Sets the **pixel size of a single tile** in the world/grid.
+    This affects rendering and snapping behavior in tools and the viewport layout.

@@ -1,5 +1,5 @@
 ---
-title: "ITEMS"
+title: "Items"
 weight: 3
 description: "Eldiron Creator: Items"
 ---
