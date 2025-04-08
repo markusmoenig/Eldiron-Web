@@ -52,6 +52,8 @@ set_attr("STR", 10)
 
 ```toml
 [attributes]
+# General purpose attributes
+STR = 10
 
 # Give the character or item a name (if they differ from the template)
 name = "Orc"
@@ -78,8 +80,12 @@ blocking = true
 # Make the item static (doors, campfires etc.). Static items cannot be picked up
 static = true
 
-# General purpose attributes
-STR = 10
+# The worth of the item in the base currency. This is its trade value.
+worth = 0.0
+
+# This item represents money. A monetary item will not be picked up by itself but its worth is added
+# to the entities wallet.
+monetary = false
 ```
 
 ---

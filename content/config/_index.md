@@ -24,6 +24,10 @@ entity_block_mode = "always"   # The block mode, "always" or "never".
 auto_create_player = true      # Whether to auto-create a player entity.
 start_region = ""              # The name of the region to start the game in.
 start_screen = ""              # The name of the screen to show at startup.
+
+# Base currency configuration
+base_currency_name = "Gold"      # Display name of the primary in-game currency.
+base_currency_symbol = "G"       # Symbol used to represent the currency (e.g. "G" for Gold).
 ```
 ### **Option Descriptions**
 
@@ -59,6 +63,13 @@ start_screen = ""              # The name of the screen to show at startup.
   The **name of the screen** to load on startup.
   If empty, Eldiron will display a black screen.
 
+#### `base_currency_name`
+- The **display name** of your game's primary currency (e.g. `"Gold"`, `"Credits"`).
+- Used in the UI, item pricing, and trade.
+
+#### `base_currency_symbol`
+- The **short symbol** shown with currency values (e.g. `"G"`).
+- Appears alongside numbers (e.g. `50 G`, `100 💎`).
 
 > [!TIP]
 > A future update will introduce **custom entity block modes** to support **alignment-based blocking** and other movement rules.

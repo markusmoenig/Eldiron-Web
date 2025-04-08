@@ -65,7 +65,7 @@ action = "forward"
 
 **Text widgets** display text on the screen and can include **static content** or **dynamic placeholders** for player or game data.
 
-Text is entered in the `text` field using a multiline string. You can insert dynamic values using placeholders like `{PLAYER.STR}` or `{PLAYER.DEX}`, which will be replaced at runtime.
+Text is entered in the `text` field using a multiline string. You can insert dynamic values using placeholders like `{PLAYER.STR}` or `{PLAYER.DEX}`, which will be replaced at runtime. `{PLAYER.FUNDS}` gets replaced by the player funds in the base currency.
 
 You can customize the **font**, **size**, **line spacing**, and **color** of the text.
 
@@ -77,16 +77,15 @@ role = "text"
 text = """
 Welcome, adventurer!
 
-STR: {PLAYER.STR}
-DEX: {PLAYER.DEX}
+STR:  {PLAYER.STR}  DEX: {PLAYER.DEX}
+GOLD: {PLAYER.FUNDS}
 
-May the stars guide
-you
+May the stars guide you!
 """
 
 font = "Tiny5-Regular"
 font_size = 18.0
-spacing = 5.0
+spacing = 2.0
 color = "#aaaaaa"
 ```
 
