@@ -19,7 +19,9 @@ The **first alpha version**, featuring the new **Doom-style editor**, is now ava
 
 ---
 
-{{< youtube "-eDhvO_u0OU?si=CqLF1ZF4xQogGX7z" >}}
+✨ **Eldiron v0.8.22** is out now – featuring **Screens & Widgets** for game UI and the new **Hideout 2D** example! 🧙‍♂️💎
+
+{{< youtube "mTZUf6c0xy4" >}}
 
 ---
 

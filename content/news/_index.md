@@ -3,24 +3,22 @@ title: "News"
 weight: 1
 ---
 
-## 🛠️ Client-Side Scripting & UI
+### Eldiron v0.8.22 Released!
 
-Until now, Eldiron has focused on **server-side scripting** for all game behavior, entities, and world logic. With the upcoming release, attention shifts to the **client side**, enabling the creation of fully interactive UI screens — all directly within the map editor.
+Eldiron v0.8.22 is now available with several exciting new features and improvements.
 
-### What's Next
+### 🆕 What's New
 
-- 🧩 **Sectors as UI Widgets**
-  Create interactive UI screens using sectors in your map. Buttons, panels, menus — all designed visually using the same tools as maps.
+- **Screens & Widgets** – Build your game's UI with buttons, text fields, message boxes, and more.
+- **New 2D Example: Hideout 2D** – Explore a new demo where you help Moody the goblin re-unite with the treasures in his lair.
 
-- ⚡ **Client-Side Scripting**
-  Define what happens when a player clicks a button, interacts with a widget, or opens a UI screen. These scripts run instantly on the client for a smooth, responsive experience.
+I’ve created a new video walking through the new features and the Hideout 2D example. In it, I explain the mechanics behind characters, items, and the new UI system:
 
-- 🔁 **Complete Server/Client Architecture**
-  UI logic runs on the client, while core game behavior stays securely on the server. This finalizes the split between client and server responsibilities — making the system fast, flexible, and future-proof.
+{{< youtube "mTZUf6c0xy4" >}}
 
-This update lays the foundation for powerful UI creation in Eldiron and completes the core architecture of the engine. The new release is just a few weeks away!
+I’ll be releasing a new version and an accompanying dev video **every 2 weeks**, so stay tuned for more!
 
-Stay tuned, and thanks for following along!
+👉 [Visit Eldiron.com for documentation and downloads](https://Eldiron.com)
 
 ### Eldiron v0.8.21 Released (17/03/2025)
 

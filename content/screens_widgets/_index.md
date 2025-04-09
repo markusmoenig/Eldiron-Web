@@ -97,7 +97,7 @@ The **Messages widget** displays all incoming messages for the player in a scrol
 
 - Messages are sent using the `message` command.
 - Each message can include an optional **category**, which determines its **display color**.
-- If no category is specified, messages default to color `#aaaaaa`.
+- If no category is specified, messages default to color `#aaaaaa`, however you can change this via "default".
 
 You can define custom **colors for categories** using keys in the widget's data section.
 In the example below, messages with the `"warning"` category will appear in **light red**.
@@ -113,4 +113,5 @@ font = "Tiny5-Regular"
 font_size = 18.0
 spacing = 5.0
 warning = "#ff8888"
+default = "#ffffff"
 ```
